@@ -25,6 +25,7 @@ import se.lantmateriet.namespace.distribution.produkter.registerbeteckning.v3.Ge
 import se.lantmateriet.namespace.distribution.produkter.registerbeteckning.v3.MatchModeType;
 import se.lantmateriet.namespace.distribution.produkter.registerbeteckning.v3.MatchSearchStringType;
 import se.lantmateriet.namespace.distribution.produkter.registerbeteckning.v3.ObjektstatusType;
+import se.lantmateriet.namespace.distribution.produkter.registerbeteckning.v3.RegisterbeteckningFilterType;
 import se.lantmateriet.namespace.distribution.produkter.registerbeteckning.v3.RegisterbeteckningMemberType;
 import se.lantmateriet.namespace.distribution.produkter.registerbeteckning.v3.RegisterbeteckningPortType;
 import se.lantmateriet.namespace.distribution.produkter.registerbeteckning.v3.RegisterbeteckningResponseType;
@@ -74,14 +75,8 @@ public class RegisterServiceUtils extends ServiceUtils {
 		return binding;
 	}
 	
-	static public List<RegisterenhetsreferensType> findRegisterbeteckning(String searchString, String lmUser) throws IOException, LMAccountException {
-		LOG.info("Calling findRegisterbeteckning with search string: " + searchString);
-		
-		if (searchString.length()<3) {
-			throw new RuntimeException("search string must be longer than 3 chars");
-		}
-		
-		RegisterbeteckningPortType binding = createBinding(lmUser);
+	static List<RegisterenhetsreferensType> findRegisterbeteckning2(RegisterbeteckningPortType binding, String searchString) {
+		LOG.info("Calling findRegisterbeteckning2 with search string: " + searchString);
 		FindRegisterbeteckningRequestType request = new FindRegisterbeteckningRequestType();
 		SearchStringFilterType searchStringFilterType = new SearchStringFilterType();
 		searchStringFilterType.setMaxHits(40);
@@ -93,6 +88,35 @@ public class RegisterServiceUtils extends ServiceUtils {
 		RegisterbeteckningsreferensResponseType response = binding.findRegisterbeteckning(request);
 		LOG.info("Got response from findRegisterbeteckning (" + response.getRegisterenhetsreferens().size() + " hits)");
 		return response.getRegisterenhetsreferens();
+		
+	}
+	
+	static public List<RegisterenhetsreferensType> findRegisterbeteckning(String searchString, String lmUser) throws IOException, LMAccountException {
+		LOG.info("Calling findRegisterbeteckning with search string: " + searchString);
+		
+		String[] splitSpace = searchString.split(" ");
+		String[] splitComma = splitSpace[0].split(",");
+		boolean multiRegisteromrade = false;
+		if (splitComma.length>1) multiRegisteromrade = true;
+		
+		RegisterbeteckningPortType binding = createBinding(lmUser);
+		
+		if (searchString.length()<3) {
+			throw new RuntimeException("search string must be longer than 3 chars");
+		}
+		
+		List<RegisterenhetsreferensType> list = new ArrayList<RegisterenhetsreferensType>();
+		
+		if (!multiRegisteromrade) {
+			list = findRegisterbeteckning2(binding, searchString);
+		} else {
+			for (String registeromrade : splitComma) {
+				List<RegisterenhetsreferensType> result = findRegisterbeteckning2(binding, registeromrade + searchString.substring(searchString.indexOf(" ")));
+				list.addAll(result);
+			}
+		}
+		
+		return list;
 	}
 	
 	static public RegisterbeteckningResponseType getRegisterenhetsreferens(List<String> objs, String lmUser) throws IOException, LMAccountException {
