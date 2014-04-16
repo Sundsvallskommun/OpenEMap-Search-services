@@ -19,21 +19,11 @@ import se.riges.search.lm.RegisterServiceUtils;
 public class TestsearchLM {
 
 	@Test
-	public void testPlacenameServiceUtil() {
-		 try {
-				List<Feature> features =  PlacenameServiceUtils.findOrt(2281, "ortv", "sundsvall");
-				
-				boolean test1 = features.size() == 1;
-			
-				assertTrue("both are identical", test1);
-				
-			} catch (Exception e) {
-				
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-				fail("Not yet implemented");
-			}
-	
+	public void testPlacenameServiceUtil() throws IOException, LMAccountException {
+		List<Feature> features =  PlacenameServiceUtils.findOrt("2281", "ortv", "sundsvall");
+		assertTrue(features.size() == 1);
+		features =  PlacenameServiceUtils.findOrt("2280,2281", "sand", "sundsvall");
+		assertTrue(features.size() == 23);
 	}
 	
 	@Test

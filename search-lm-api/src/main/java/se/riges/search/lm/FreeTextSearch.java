@@ -45,7 +45,7 @@ public class FreeTextSearch implements se.riges.lm.rmi.Search {
 		try {
 
 			List<Feature> features = PlacenameServiceUtils.findOrt(
-					municaplityCode, placename, municaplity);
+					Integer.toString(municaplityCode), placename, municaplity);
 
 			for (int i = 0; i <= features.size() - 1; i++) {
 

@@ -20,6 +20,7 @@ import org.wololo.jts2geojson.GeoJSONWriter;
 
 import se.lantmateriet.namespace.distribution.products.placename.v1.FindOrtnamnRequest;
 import se.lantmateriet.namespace.distribution.products.placename.v1.FindOrtnamnResponse;
+import se.lantmateriet.namespace.distribution.products.placename.v1.FindOrtnamnsreferensRequest;
 import se.lantmateriet.namespace.distribution.products.placename.v1.MatchFritextType;
 import se.lantmateriet.namespace.distribution.products.placename.v1.MatchModeType;
 import se.lantmateriet.namespace.distribution.products.placename.v1.NamntypType;
@@ -65,18 +66,13 @@ public class PlacenameServiceUtils extends ServiceUtils {
 		return binding;
 	}
 	
-	static public List<Feature> findOrt(Integer kommunkod, String searchString, String lmUser) throws IOException, LMAccountException {
-		LOG.info("Calling findOrtnamn with search string: " + searchString + " and kommunkod: " + kommunkod);
-		
-		
-		if (searchString.length()<3) {
-			throw new RuntimeException("search string must be longer than 3 chars");
-		}
-		
+	static List<Feature> findOrt2(Integer kommunkod, String searchString, String lmUser) throws IOException, LMAccountException {
 		Placename binding = createBinding(lmUser);
-		FindOrtnamnRequest findOrtnamnRequest = new FindOrtnamnRequest();
 		
 		// NOTE: no option to set max results... results can be very large :(
+		// NOTE: FindOrtnamnsreferensRequest (which has max result) cannot be used since it cannot filter on namntyp etc.
+		FindOrtnamnRequest findOrtnamnRequest = new FindOrtnamnRequest();
+		
 		OrtnamnCriteriaType ortnamnCriteriaType = new OrtnamnCriteriaType();
 		if (kommunkod != null) {
 			ortnamnCriteriaType.setKommunkod(kommunkod % 100);
@@ -92,6 +88,7 @@ public class PlacenameServiceUtils extends ServiceUtils {
 		matchFritextType.setValue(searchString);
 		ortnamnCriteriaType.setNamn(matchFritextType);
 		ortnamnCriteriaType.setSprak("SV");
+		
 		findOrtnamnRequest.setOrtnamnCriteria(ortnamnCriteriaType);
 		FindOrtnamnResponse response = binding.findOrtnamn(findOrtnamnRequest);
 		
@@ -113,5 +110,24 @@ public class PlacenameServiceUtils extends ServiceUtils {
 		}
 		
 		return features;
+	}
+	
+	static public List<Feature> findOrt(String kommunkod, String searchString, String lmUser) throws IOException, LMAccountException {
+		LOG.info("Calling findOrtnamn with search string: " + searchString + " and kommunkod: " + kommunkod);
+		
+		if (searchString.length()<3) {
+			throw new RuntimeException("search string must be longer than 3 chars");
+		}
+		
+		if (kommunkod != null) {
+			List<Feature> features = new ArrayList<Feature>();
+			String[] kommunkoder = kommunkod.split(",");
+			for (String kod : kommunkoder) {
+				features.addAll(findOrt2(Integer.parseInt(kod), searchString, lmUser));
+			}
+			return features;
+		} else {
+			return findOrt2(null, searchString, lmUser);
+		}
 	}
 }
