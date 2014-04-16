@@ -4,6 +4,8 @@ import static org.junit.Assert.fail;
 import java.io.IOException;
 import java.util.List;
 
+import org.codehaus.jackson.JsonNode;
+import org.codehaus.jackson.node.ArrayNode;
 import org.junit.Test;
 import org.wololo.geojson.Feature;
 
@@ -33,22 +35,19 @@ public class TestsearchLM {
 			}
 	
 	}
-	@Test
-	public void testAdressServiceUtil() {
-		 try {
-				FindAdressResponse adressresponse =  AddressServiceUtils.findAdress("sundsvall storgatan", "Sundsvall");
-				
-				boolean test1 = true;//adressresponse.size() == 1;
-				System.out.println(adressresponse.toString());
-				assertTrue("both are identical", test1);
-				
-			} catch (Exception e) {
-				
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-				fail("Not yet implemented");
-			}
 	
+	@Test
+	public void testAdressServiceUtils() throws IOException, LMAccountException {
+		ArrayNode result = (ArrayNode) AddressServiceUtils.findAddress("sundsvall storgatan 1", "Sundsvall");
+		assertTrue(result.size() == 11);
+		assertTrue(((ArrayNode)result.get(0)).get(0).asInt() == 2849180);
+	}
+	
+	@Test
+	public void testAdressServiceUtilsMulti() throws IOException, LMAccountException {
+		ArrayNode result = (ArrayNode) AddressServiceUtils.findAddress("sundsvall,härnösand storgatan 1", "Sundsvall");
+		assertTrue(result.size() == 27);
+		assertTrue(((ArrayNode)result.get(0)).get(0).asInt() == 2849180);
 	}
 	
 	@Test
