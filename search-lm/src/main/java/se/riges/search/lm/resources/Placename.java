@@ -17,7 +17,7 @@ public class Placename {
 
 	@GET
 	@Produces("application/json")
-	public List<Feature> findPlacename(@QueryParam("kommunkod") Integer kommunkod, @QueryParam("q") String searchString, @QueryParam("lmuser") String lmUser) throws IOException, LMAccountException {
+	public List<Feature> findPlacename(@QueryParam("kommunkod") String kommunkod, @QueryParam("q") String searchString, @QueryParam("lmuser") String lmUser) throws IOException, LMAccountException {
 		List<Feature> result = se.riges.search.lm.PlacenameServiceUtils.findOrt(kommunkod, searchString, lmUser);
 
 		return result;

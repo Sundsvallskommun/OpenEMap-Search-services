@@ -71,29 +71,57 @@ public class AddressServiceUtils extends ServiceUtils {
 	static public JsonNode findAddress(String searchString, String lmUser) throws IOException, LMAccountException {
 		LOG.info("Calling findAddress with search string: " + searchString);
 
-		
-		FindAdressResponse response = findAdress(searchString, lmUser);
-		
-		LOG.info("Got response from findAdressreferens (" + response.getAdress().size() + " hits)");
-		
 		ArrayNode rows = factory.arrayNode();
-		for (AdressType adress : response.getAdress()) {
-			ArrayNode row = factory.arrayNode();
+		
+		String[] municipalities = searchString.split(" ")[0].split(",");
+		if (municipalities.length>1) {
+			for (String municipality : municipalities) {
+				FindAdressResponse response = findAdress(municipality + searchString.substring(searchString.indexOf(" ")), lmUser);
+				
+				LOG.info("Got response from findAdressreferens (" + response.getAdress().size() + " hits)");
+						
+				for (AdressType adress : response.getAdress()) {
+					ArrayNode row = factory.arrayNode();
+					
+					// NOTE: need manual conversion, only have GML 3.2 conversion classes....
+					PointType pointType = adress.getAdressplatspunkt();
+					double x = pointType.getPos().getValue().get(0);
+					double y = pointType.getPos().getValue().get(1);
+					Point point = new GeometryFactory(new PrecisionModel(PrecisionModel.FLOATING), 3006).createPoint(new Coordinate(x, y));
+					
+					String fnr = adress.getFastighetsnyckel();
+					
+					row.add(adress.getAdressplatsid());
+					row.add(adress.getKommunnamn() + " " + adress.getAdressomrade() + " " + adress.getAdressplatsnummer() + ", " + adress.getKommundelsnamn());
+					row.add(y);
+					row.add(x);
+					row.add(fnr);
+					rows.add(row);
+				}
+			}
+		} else {
+			FindAdressResponse response = findAdress(searchString, lmUser);
 			
-			// NOTE: need manual conversion, only have GML 3.2 conversion classes....
-			PointType pointType = adress.getAdressplatspunkt();
-			double x = pointType.getPos().getValue().get(0);
-			double y = pointType.getPos().getValue().get(1);
-			Point point = new GeometryFactory(new PrecisionModel(PrecisionModel.FLOATING), 3006).createPoint(new Coordinate(x, y));
-			
-			String fnr = adress.getFastighetsnyckel();
-			
-			row.add(adress.getAdressplatsid());
-			row.add(adress.getKommunnamn() + " " + adress.getAdressomrade() + " " + adress.getAdressplatsnummer() + ", " + adress.getKommundelsnamn());
-			row.add(y);
-			row.add(x);
-			row.add(fnr);
-			rows.add(row);
+			LOG.info("Got response from findAdressreferens (" + response.getAdress().size() + " hits)");
+					
+			for (AdressType adress : response.getAdress()) {
+				ArrayNode row = factory.arrayNode();
+				
+				// NOTE: need manual conversion, only have GML 3.2 conversion classes....
+				PointType pointType = adress.getAdressplatspunkt();
+				double x = pointType.getPos().getValue().get(0);
+				double y = pointType.getPos().getValue().get(1);
+				Point point = new GeometryFactory(new PrecisionModel(PrecisionModel.FLOATING), 3006).createPoint(new Coordinate(x, y));
+				
+				String fnr = adress.getFastighetsnyckel();
+				
+				row.add(adress.getAdressplatsid());
+				row.add(adress.getKommunnamn() + " " + adress.getAdressomrade() + " " + adress.getAdressplatsnummer() + ", " + adress.getKommundelsnamn());
+				row.add(y);
+				row.add(x);
+				row.add(fnr);
+				rows.add(row);
+			}
 		}
 		
 		return rows;
