@@ -1,17 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<groupId>se.riges</groupId>
 	<artifactId>search-lm</artifactId>
 	<packaging>war</packaging>
-	<version>0.10.0</version>
+	<version>0.11.0</version>
 	<name>RIGES Search LM REST API</name>
-	
-	<parent>
-		<groupId>se.riges</groupId>
-		<artifactId>riges-parent</artifactId>
-		<version>0.1.0</version>
-	</parent>
-	
+		
 	<dependencies>
 		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
@@ -41,12 +36,12 @@
 		<dependency>
 			<groupId>se.riges</groupId>
 			<artifactId>search-lm-rmi</artifactId>
-			<version>0.1.2</version>
+			<version>0.11.0</version>
 		</dependency>
 		<dependency>
 			<groupId>se.riges</groupId>
 			<artifactId>search-lm-api</artifactId>
-			<version>0.5.1-SNAPSHOT</version>
+			<version>0.11.0</version>
 		</dependency>
 	</dependencies>
 
@@ -65,7 +60,14 @@
 					</archive>
 				</configuration>
 			</plugin>
-
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
 		</plugins>
 	</build>
 </project>
