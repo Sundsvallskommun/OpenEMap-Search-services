@@ -4,8 +4,8 @@
 	<groupId>se.riges</groupId>
 	<artifactId>openemap-search-backend-api</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.5</version>
-	<name>RIGES Search LM API</name>
+	<version>1.0.6</version>
+	<name>OpenEMap Search backend API</name>
 
 	<dependencies>
 	    <dependency>
@@ -36,7 +36,7 @@
 		<dependency>
 			<groupId>se.riges</groupId>
 			<artifactId>openemap-search-backend-rmi</artifactId>
-			<version>1.0.5</version>
+			<version>1.0.6</version>
 		</dependency>
 	</dependencies>
 

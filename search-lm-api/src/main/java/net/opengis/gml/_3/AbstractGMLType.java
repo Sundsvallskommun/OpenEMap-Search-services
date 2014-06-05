@@ -47,7 +47,7 @@ public abstract class AbstractGMLType {
 
     protected String description;
     protected List<CodeType> name;
-    @XmlAttribute(namespace = "http://www.opengis.net/gml/3.2", required = true)
+    @XmlAttribute(name = "id", namespace = "http://www.opengis.net/gml/3.2", required = true)
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlID
     @XmlSchemaType(name = "ID")

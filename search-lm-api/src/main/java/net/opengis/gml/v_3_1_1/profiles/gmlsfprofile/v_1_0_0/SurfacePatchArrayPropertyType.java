@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class SurfacePatchArrayPropertyType {
 
-    @XmlElementRef(name = "_SurfacePatch", namespace = "http://www.opengis.net/gml", type = JAXBElement.class)
+    @XmlElementRef(name = "_SurfacePatch", namespace = "http://www.opengis.net/gml", type = JAXBElement.class, required = false)
     protected List<JAXBElement<? extends AbstractSurfacePatchType>> surfacePatch;
 
     /**
@@ -60,8 +60,8 @@ public class SurfacePatchArrayPropertyType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link JAXBElement }{@code <}{@link PolygonPatchType }{@code >}
      * {@link JAXBElement }{@code <}{@link AbstractSurfacePatchType }{@code >}
+     * {@link JAXBElement }{@code <}{@link PolygonPatchType }{@code >}
      * 
      * 
      */

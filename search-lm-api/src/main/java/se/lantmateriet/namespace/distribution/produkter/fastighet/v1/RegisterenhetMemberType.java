@@ -19,7 +19,7 @@ import net.opengis.gml._3.AbstractFeatureMemberType;
  *   &lt;complexContent>
  *     &lt;extension base="{http://www.opengis.net/gml/3.2}AbstractFeatureMemberType">
  *       &lt;sequence>
- *         &lt;element ref="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}Registerenhet"/>
+ *         &lt;element ref="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}Registerenhet"/>
  *       &lt;/sequence>
  *     &lt;/extension>
  *   &lt;/complexContent>
@@ -36,7 +36,7 @@ public class RegisterenhetMemberType
     extends AbstractFeatureMemberType
 {
 
-    @XmlElementRef(name = "Registerenhet", namespace = "http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1", type = JAXBElement.class)
+    @XmlElementRef(name = "Registerenhet", namespace = "http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5", type = JAXBElement.class)
     protected JAXBElement<? extends RegisterenhetType> registerenhet;
 
     /**
@@ -45,8 +45,8 @@ public class RegisterenhetMemberType
      * @return
      *     possible object is
      *     {@link JAXBElement }{@code <}{@link RegisterenhetType }{@code >}
-     *     {@link JAXBElement }{@code <}{@link SamfallighetType }{@code >}
      *     {@link JAXBElement }{@code <}{@link FastighetType }{@code >}
+     *     {@link JAXBElement }{@code <}{@link SamfallighetType }{@code >}
      *     
      */
     public JAXBElement<? extends RegisterenhetType> getRegisterenhet() {
@@ -59,12 +59,12 @@ public class RegisterenhetMemberType
      * @param value
      *     allowed object is
      *     {@link JAXBElement }{@code <}{@link RegisterenhetType }{@code >}
-     *     {@link JAXBElement }{@code <}{@link SamfallighetType }{@code >}
      *     {@link JAXBElement }{@code <}{@link FastighetType }{@code >}
+     *     {@link JAXBElement }{@code <}{@link SamfallighetType }{@code >}
      *     
      */
     public void setRegisterenhet(JAXBElement<? extends RegisterenhetType> value) {
-        this.registerenhet = ((JAXBElement<? extends RegisterenhetType> ) value);
+        this.registerenhet = value;
     }
 
 }

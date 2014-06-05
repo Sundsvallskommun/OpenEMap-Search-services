@@ -42,7 +42,7 @@ public class ByggnadResponseType
 
     @XmlElement(name = "ByggnadMember")
     protected List<ByggnadMemberType> byggnadMember;
-    @XmlAttribute
+    @XmlAttribute(name = "aggregationType")
     protected AggregationType aggregationType;
 
     /**

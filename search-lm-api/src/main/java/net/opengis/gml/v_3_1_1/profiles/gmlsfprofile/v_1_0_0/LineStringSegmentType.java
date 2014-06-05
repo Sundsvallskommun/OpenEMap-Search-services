@@ -45,7 +45,7 @@ public class LineStringSegmentType
 
     @XmlElement(required = true)
     protected DirectPositionListType posList;
-    @XmlAttribute
+    @XmlAttribute(name = "interpolation")
     protected CurveInterpolationType interpolation;
 
     /**

@@ -42,7 +42,7 @@ public class RegisterbeteckningResponseType
 
     @XmlElement(name = "RegisterbeteckningMember")
     protected List<RegisterbeteckningMemberType> registerbeteckningMember;
-    @XmlAttribute
+    @XmlAttribute(name = "aggregationType")
     protected AggregationType aggregationType;
 
     /**

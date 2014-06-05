@@ -46,11 +46,91 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link KomplementbyggnadType }
+     * 
+     */
+    public KomplementbyggnadType createKomplementbyggnadType() {
+        return new KomplementbyggnadType();
+    }
+
+    /**
+     * Create an instance of {@link ByggnadResponseType }
+     * 
+     */
+    public ByggnadResponseType createByggnadResponseType() {
+        return new ByggnadResponseType();
+    }
+
+    /**
+     * Create an instance of {@link ByggnadType }
+     * 
+     */
+    public ByggnadType createByggnadType() {
+        return new ByggnadType();
+    }
+
+    /**
+     * Create an instance of {@link OvrigByggnadType }
+     * 
+     */
+    public OvrigByggnadType createOvrigByggnadType() {
+        return new OvrigByggnadType();
+    }
+
+    /**
+     * Create an instance of {@link BostadType }
+     * 
+     */
+    public BostadType createBostadType() {
+        return new BostadType();
+    }
+
+    /**
+     * Create an instance of {@link EkonomibyggnadType }
+     * 
+     */
+    public EkonomibyggnadType createEkonomibyggnadType() {
+        return new EkonomibyggnadType();
+    }
+
+    /**
+     * Create an instance of {@link SamhallsfunktionType }
+     * 
+     */
+    public SamhallsfunktionType createSamhallsfunktionType() {
+        return new SamhallsfunktionType();
+    }
+
+    /**
+     * Create an instance of {@link VerksamhetType }
+     * 
+     */
+    public VerksamhetType createVerksamhetType() {
+        return new VerksamhetType();
+    }
+
+    /**
      * Create an instance of {@link ByggnadsreferensResponseType }
      * 
      */
     public ByggnadsreferensResponseType createByggnadsreferensResponseType() {
         return new ByggnadsreferensResponseType();
+    }
+
+    /**
+     * Create an instance of {@link FindByggnadRequestType }
+     * 
+     */
+    public FindByggnadRequestType createFindByggnadRequestType() {
+        return new FindByggnadRequestType();
+    }
+
+    /**
+     * Create an instance of {@link IndustriType }
+     * 
+     */
+    public IndustriType createIndustriType() {
+        return new IndustriType();
     }
 
     /**
@@ -70,147 +150,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link EkonomibyggnadType }
-     * 
-     */
-    public EkonomibyggnadType createEkonomibyggnadType() {
-        return new EkonomibyggnadType();
-    }
-
-    /**
-     * Create an instance of {@link BostadType }
-     * 
-     */
-    public BostadType createBostadType() {
-        return new BostadType();
-    }
-
-    /**
-     * Create an instance of {@link RegisterenhetsreferensType }
-     * 
-     */
-    public RegisterenhetsreferensType createRegisterenhetsreferensType() {
-        return new RegisterenhetsreferensType();
-    }
-
-    /**
-     * Create an instance of {@link ByggnadsanmarkningType }
-     * 
-     */
-    public ByggnadsanmarkningType createByggnadsanmarkningType() {
-        return new ByggnadsanmarkningType();
-    }
-
-    /**
-     * Create an instance of {@link IndustriType }
-     * 
-     */
-    public IndustriType createIndustriType() {
-        return new IndustriType();
-    }
-
-    /**
-     * Create an instance of {@link SamhallsfunktionType }
-     * 
-     */
-    public SamhallsfunktionType createSamhallsfunktionType() {
-        return new SamhallsfunktionType();
-    }
-
-    /**
-     * Create an instance of {@link RegisterenhetsreferensPropertyType }
-     * 
-     */
-    public RegisterenhetsreferensPropertyType createRegisterenhetsreferensPropertyType() {
-        return new RegisterenhetsreferensPropertyType();
-    }
-
-    /**
-     * Create an instance of {@link ByggnadResponseType }
-     * 
-     */
-    public ByggnadResponseType createByggnadResponseType() {
-        return new ByggnadResponseType();
-    }
-
-    /**
-     * Create an instance of {@link FindByggnadRequestType }
-     * 
-     */
-    public FindByggnadRequestType createFindByggnadRequestType() {
-        return new FindByggnadRequestType();
-    }
-
-    /**
-     * Create an instance of {@link ByggnadsytaType }
-     * 
-     */
-    public ByggnadsytaType createByggnadsytaType() {
-        return new ByggnadsytaType();
-    }
-
-    /**
      * Create an instance of {@link SkyddsrumType }
      * 
      */
     public SkyddsrumType createSkyddsrumType() {
         return new SkyddsrumType();
-    }
-
-    /**
-     * Create an instance of {@link ByggnadType }
-     * 
-     */
-    public ByggnadType createByggnadType() {
-        return new ByggnadType();
-    }
-
-    /**
-     * Create an instance of {@link KomplementbyggnadType }
-     * 
-     */
-    public KomplementbyggnadType createKomplementbyggnadType() {
-        return new KomplementbyggnadType();
-    }
-
-    /**
-     * Create an instance of {@link ByggnadsattributType }
-     * 
-     */
-    public ByggnadsattributType createByggnadsattributType() {
-        return new ByggnadsattributType();
-    }
-
-    /**
-     * Create an instance of {@link OvrigByggnadType }
-     * 
-     */
-    public OvrigByggnadType createOvrigByggnadType() {
-        return new OvrigByggnadType();
-    }
-
-    /**
-     * Create an instance of {@link EntreType }
-     * 
-     */
-    public EntreType createEntreType() {
-        return new EntreType();
-    }
-
-    /**
-     * Create an instance of {@link ResultatType }
-     * 
-     */
-    public ResultatType createResultatType() {
-        return new ResultatType();
-    }
-
-    /**
-     * Create an instance of {@link ByggnadMemberType }
-     * 
-     */
-    public ByggnadMemberType createByggnadMemberType() {
-        return new ByggnadMemberType();
     }
 
     /**
@@ -222,43 +166,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link LagesnoggrannhetType }
+     * Create an instance of {@link ByggnadsanmarkningType }
      * 
      */
-    public LagesnoggrannhetType createLagesnoggrannhetType() {
-        return new LagesnoggrannhetType();
-    }
-
-    /**
-     * Create an instance of {@link ByggnadGeometryFilterType }
-     * 
-     */
-    public ByggnadGeometryFilterType createByggnadGeometryFilterType() {
-        return new ByggnadGeometryFilterType();
-    }
-
-    /**
-     * Create an instance of {@link VerksamhetType }
-     * 
-     */
-    public VerksamhetType createVerksamhetType() {
-        return new VerksamhetType();
-    }
-
-    /**
-     * Create an instance of {@link VerksamhetsatgardType }
-     * 
-     */
-    public VerksamhetsatgardType createVerksamhetsatgardType() {
-        return new VerksamhetsatgardType();
-    }
-
-    /**
-     * Create an instance of {@link ByggnadsdelType }
-     * 
-     */
-    public ByggnadsdelType createByggnadsdelType() {
-        return new ByggnadsdelType();
+    public ByggnadsanmarkningType createByggnadsanmarkningType() {
+        return new ByggnadsanmarkningType();
     }
 
     /**
@@ -270,6 +182,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link RegisterenhetsreferensPropertyType }
+     * 
+     */
+    public RegisterenhetsreferensPropertyType createRegisterenhetsreferensPropertyType() {
+        return new RegisterenhetsreferensPropertyType();
+    }
+
+    /**
+     * Create an instance of {@link ResultatType }
+     * 
+     */
+    public ResultatType createResultatType() {
+        return new ResultatType();
+    }
+
+    /**
+     * Create an instance of {@link ByggnadsdelType }
+     * 
+     */
+    public ByggnadsdelType createByggnadsdelType() {
+        return new ByggnadsdelType();
+    }
+
+    /**
      * Create an instance of {@link ByggnadsreferensType }
      * 
      */
@@ -278,11 +214,75 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ByggnadsytaType }
+     * 
+     */
+    public ByggnadsytaType createByggnadsytaType() {
+        return new ByggnadsytaType();
+    }
+
+    /**
      * Create an instance of {@link ByggnadsnamnType }
      * 
      */
     public ByggnadsnamnType createByggnadsnamnType() {
         return new ByggnadsnamnType();
+    }
+
+    /**
+     * Create an instance of {@link EntreType }
+     * 
+     */
+    public EntreType createEntreType() {
+        return new EntreType();
+    }
+
+    /**
+     * Create an instance of {@link RegisterenhetsreferensType }
+     * 
+     */
+    public RegisterenhetsreferensType createRegisterenhetsreferensType() {
+        return new RegisterenhetsreferensType();
+    }
+
+    /**
+     * Create an instance of {@link ByggnadGeometryFilterType }
+     * 
+     */
+    public ByggnadGeometryFilterType createByggnadGeometryFilterType() {
+        return new ByggnadGeometryFilterType();
+    }
+
+    /**
+     * Create an instance of {@link ByggnadMemberType }
+     * 
+     */
+    public ByggnadMemberType createByggnadMemberType() {
+        return new ByggnadMemberType();
+    }
+
+    /**
+     * Create an instance of {@link VerksamhetsatgardType }
+     * 
+     */
+    public VerksamhetsatgardType createVerksamhetsatgardType() {
+        return new VerksamhetsatgardType();
+    }
+
+    /**
+     * Create an instance of {@link LagesnoggrannhetType }
+     * 
+     */
+    public LagesnoggrannhetType createLagesnoggrannhetType() {
+        return new LagesnoggrannhetType();
+    }
+
+    /**
+     * Create an instance of {@link ByggnadsattributType }
+     * 
+     */
+    public ByggnadsattributType createByggnadsattributType() {
+        return new ByggnadsattributType();
     }
 
     /**

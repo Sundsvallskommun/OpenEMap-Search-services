@@ -49,7 +49,7 @@ public class PolygonPatchType
 
     protected AbstractRingPropertyType exterior;
     protected List<AbstractRingPropertyType> interior;
-    @XmlAttribute
+    @XmlAttribute(name = "interpolation")
     protected SurfaceInterpolationType interpolation;
 
     /**

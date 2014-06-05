@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class CurveSegmentArrayPropertyType {
 
-    @XmlElementRef(name = "_CurveSegment", namespace = "http://www.opengis.net/gml", type = JAXBElement.class)
+    @XmlElementRef(name = "_CurveSegment", namespace = "http://www.opengis.net/gml", type = JAXBElement.class, required = false)
     protected List<JAXBElement<? extends AbstractCurveSegmentType>> curveSegment;
 
     /**
@@ -60,8 +60,8 @@ public class CurveSegmentArrayPropertyType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link JAXBElement }{@code <}{@link LineStringSegmentType }{@code >}
      * {@link JAXBElement }{@code <}{@link AbstractCurveSegmentType }{@code >}
+     * {@link JAXBElement }{@code <}{@link LineStringSegmentType }{@code >}
      * 
      * 
      */

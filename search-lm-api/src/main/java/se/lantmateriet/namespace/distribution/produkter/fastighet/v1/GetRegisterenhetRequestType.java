@@ -20,10 +20,10 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;choice>
- *           &lt;element name="objektidentitet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}UUIDType" maxOccurs="unbounded"/>
- *           &lt;element name="fastighetsnyckel" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}FastighetsnyckelType" maxOccurs="unbounded"/>
+ *           &lt;element name="objektidentitet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}UUIDType" maxOccurs="unbounded"/>
+ *           &lt;element name="fastighetsnyckel" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}FastighetsnyckelType" maxOccurs="unbounded"/>
  *         &lt;/choice>
- *         &lt;element name="IncludeData" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}RegisterenhetDatasetType" minOccurs="0"/>
+ *         &lt;element name="IncludeData" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}RegisterenhetDatasetType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>

@@ -18,12 +18,12 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;choice minOccurs="0">
- *           &lt;element name="Delagare" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}RegisterenhetsreferensPropertyType"/>
- *           &lt;element name="Samfallighet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}RegisterenhetsreferensPropertyType"/>
+ *           &lt;element name="Delagare" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}RegisterenhetsreferensPropertyType"/>
+ *           &lt;element name="Samfallighet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}RegisterenhetsreferensPropertyType"/>
  *         &lt;/choice>
  *         &lt;element name="andel" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="andelstalssort" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}AndelstalssortType" minOccurs="0"/>
- *         &lt;element name="AnnanDelagare" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}AnnanDelagare" minOccurs="0"/>
+ *         &lt;element name="andelstalssort" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}AndelstalssortType" minOccurs="0"/>
+ *         &lt;element name="AnnanDelagare" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}AnnanDelagare" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>

@@ -24,16 +24,16 @@ import net.opengis.gml._3.PointPropertyType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="omradesnummer" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="utrymmestyp" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}UtrymmestypType" minOccurs="0"/>
+ *         &lt;element name="utrymmestyp" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}UtrymmestypType" minOccurs="0"/>
  *         &lt;element name="hojdlage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="storlek" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="boarea" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="osakerhetBoarea" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="registerkarta" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="ytkvalitet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}YtkvalitetType" minOccurs="0"/>
+ *         &lt;element name="ytkvalitet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}YtkvalitetType" minOccurs="0"/>
  *         &lt;element name="Yta" type="{http://www.opengis.net/gml/3.2}GeometryArrayPropertyType" minOccurs="0"/>
  *         &lt;element name="Centralpunkt" type="{http://www.opengis.net/gml/3.2}PointPropertyType" minOccurs="0"/>
- *         &lt;element name="UrholkarRegisterenhet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}RegisterenhetsreferensArrayPropertyType" minOccurs="0"/>
+ *         &lt;element name="UrholkarRegisterenhet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}RegisterenhetsreferensArrayPropertyType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>

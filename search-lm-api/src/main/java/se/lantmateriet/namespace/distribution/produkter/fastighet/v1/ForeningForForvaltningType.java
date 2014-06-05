@@ -17,7 +17,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="foreningstyp" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}ForeningstypType"/>
+ *         &lt;element name="foreningstyp" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}ForeningstypType"/>
  *         &lt;element name="foreningsnamn" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>

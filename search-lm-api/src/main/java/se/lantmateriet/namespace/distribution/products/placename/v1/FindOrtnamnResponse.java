@@ -40,7 +40,7 @@ public class FindOrtnamnResponse {
 
     @XmlElement(name = "Ortnamn")
     protected List<OrtnamnType> ortnamn;
-    @XmlAttribute
+    @XmlAttribute(name = "totaltAntal")
     protected Integer totaltAntal;
 
     /**

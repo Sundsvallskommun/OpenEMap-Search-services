@@ -73,7 +73,7 @@ public class ByggnadType
     protected List<ByggnadsanmarkningType> byggnadsanmarkning;
     @XmlElement(name = "Byggnadsnamn")
     protected List<ByggnadsnamnType> byggnadsnamn;
-    @XmlElementRef(name = "Byggnadsandamal", namespace = "http://namespace.lantmateriet.se/distribution/produkter/byggnad/v1", type = JAXBElement.class)
+    @XmlElementRef(name = "Byggnadsandamal", namespace = "http://namespace.lantmateriet.se/distribution/produkter/byggnad/v1", type = JAXBElement.class, required = false)
     protected List<JAXBElement<? extends ByggnadsandamalType>> byggnadsandamal;
     @XmlElement(name = "Skyddsrum")
     protected List<SkyddsrumType> skyddsrum;
@@ -238,14 +238,14 @@ public class ByggnadType
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
+     * {@link JAXBElement }{@code <}{@link SamhallsfunktionType }{@code >}
+     * {@link JAXBElement }{@code <}{@link EkonomibyggnadType }{@code >}
+     * {@link JAXBElement }{@code <}{@link KomplementbyggnadType }{@code >}
+     * {@link JAXBElement }{@code <}{@link IndustriType }{@code >}
      * {@link JAXBElement }{@code <}{@link BostadType }{@code >}
      * {@link JAXBElement }{@code <}{@link OvrigByggnadType }{@code >}
      * {@link JAXBElement }{@code <}{@link ByggnadsandamalType }{@code >}
-     * {@link JAXBElement }{@code <}{@link KomplementbyggnadType }{@code >}
-     * {@link JAXBElement }{@code <}{@link EkonomibyggnadType }{@code >}
-     * {@link JAXBElement }{@code <}{@link IndustriType }{@code >}
      * {@link JAXBElement }{@code <}{@link VerksamhetType }{@code >}
-     * {@link JAXBElement }{@code <}{@link SamhallsfunktionType }{@code >}
      * 
      * 
      */

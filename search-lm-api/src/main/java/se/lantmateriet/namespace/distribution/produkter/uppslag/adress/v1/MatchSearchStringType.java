@@ -33,7 +33,7 @@ public class MatchSearchStringType {
 
     @XmlValue
     protected String value;
-    @XmlAttribute
+    @XmlAttribute(name = "match")
     protected MatchModeType match;
 
     /**

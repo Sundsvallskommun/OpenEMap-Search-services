@@ -41,43 +41,19 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link OrtnamnCriteriaType }
+     * 
+     */
+    public OrtnamnCriteriaType createOrtnamnCriteriaType() {
+        return new OrtnamnCriteriaType();
+    }
+
+    /**
      * Create an instance of {@link OrtnamnType }
      * 
      */
     public OrtnamnType createOrtnamnType() {
         return new OrtnamnType();
-    }
-
-    /**
-     * Create an instance of {@link MatchFritextType }
-     * 
-     */
-    public MatchFritextType createMatchFritextType() {
-        return new MatchFritextType();
-    }
-
-    /**
-     * Create an instance of {@link OrtnamnsplaceringType }
-     * 
-     */
-    public OrtnamnsplaceringType createOrtnamnsplaceringType() {
-        return new OrtnamnsplaceringType();
-    }
-
-    /**
-     * Create an instance of {@link FindOrtnamnResponse }
-     * 
-     */
-    public FindOrtnamnResponse createFindOrtnamnResponse() {
-        return new FindOrtnamnResponse();
-    }
-
-    /**
-     * Create an instance of {@link OrtnamnsreferensType }
-     * 
-     */
-    public OrtnamnsreferensType createOrtnamnsreferensType() {
-        return new OrtnamnsreferensType();
     }
 
     /**
@@ -97,27 +73,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link FindOrtnamnsreferensResponse }
+     * Create an instance of {@link OrtnamnsreferensType }
      * 
      */
-    public FindOrtnamnsreferensResponse createFindOrtnamnsreferensResponse() {
-        return new FindOrtnamnsreferensResponse();
+    public OrtnamnsreferensType createOrtnamnsreferensType() {
+        return new OrtnamnsreferensType();
     }
 
     /**
-     * Create an instance of {@link IntervallType }
+     * Create an instance of {@link FindOrtnamnResponse }
      * 
      */
-    public IntervallType createIntervallType() {
-        return new IntervallType();
-    }
-
-    /**
-     * Create an instance of {@link OrtnamnCriteriaType }
-     * 
-     */
-    public OrtnamnCriteriaType createOrtnamnCriteriaType() {
-        return new OrtnamnCriteriaType();
+    public FindOrtnamnResponse createFindOrtnamnResponse() {
+        return new FindOrtnamnResponse();
     }
 
     /**
@@ -129,11 +97,43 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link FindOrtnamnsreferensResponse }
+     * 
+     */
+    public FindOrtnamnsreferensResponse createFindOrtnamnsreferensResponse() {
+        return new FindOrtnamnsreferensResponse();
+    }
+
+    /**
+     * Create an instance of {@link MatchFritextType }
+     * 
+     */
+    public MatchFritextType createMatchFritextType() {
+        return new MatchFritextType();
+    }
+
+    /**
      * Create an instance of {@link NamntyperType }
      * 
      */
     public NamntyperType createNamntyperType() {
         return new NamntyperType();
+    }
+
+    /**
+     * Create an instance of {@link OrtnamnsplaceringType }
+     * 
+     */
+    public OrtnamnsplaceringType createOrtnamnsplaceringType() {
+        return new OrtnamnsplaceringType();
+    }
+
+    /**
+     * Create an instance of {@link IntervallType }
+     * 
+     */
+    public IntervallType createIntervallType() {
+        return new IntervallType();
     }
 
     /**

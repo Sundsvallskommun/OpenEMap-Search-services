@@ -27,8 +27,8 @@ public class ObjectFactory {
     private final static QName _MultiPoint_QNAME = new QName("http://www.opengis.net/gml/3.2", "MultiPoint");
     private final static QName _MultiCurve_QNAME = new QName("http://www.opengis.net/gml/3.2", "MultiCurve");
     private final static QName _Point_QNAME = new QName("http://www.opengis.net/gml/3.2", "Point");
-    private final static QName _AbstractGeometry_QNAME = new QName("http://www.opengis.net/gml/3.2", "AbstractGeometry");
     private final static QName _Description_QNAME = new QName("http://www.opengis.net/gml/3.2", "description");
+    private final static QName _AbstractGeometry_QNAME = new QName("http://www.opengis.net/gml/3.2", "AbstractGeometry");
     private final static QName _Name_QNAME = new QName("http://www.opengis.net/gml/3.2", "name");
     private final static QName _LinearRing_QNAME = new QName("http://www.opengis.net/gml/3.2", "LinearRing");
     private final static QName _PointMember_QNAME = new QName("http://www.opengis.net/gml/3.2", "pointMember");
@@ -61,46 +61,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GeometryArrayPropertyType }
-     * 
-     */
-    public GeometryArrayPropertyType createGeometryArrayPropertyType() {
-        return new GeometryArrayPropertyType();
-    }
-
-    /**
-     * Create an instance of {@link LineStringType }
-     * 
-     */
-    public LineStringType createLineStringType() {
-        return new LineStringType();
-    }
-
-    /**
-     * Create an instance of {@link CodeType }
-     * 
-     */
-    public CodeType createCodeType() {
-        return new CodeType();
-    }
-
-    /**
-     * Create an instance of {@link MultiCurvePropertyType }
-     * 
-     */
-    public MultiCurvePropertyType createMultiCurvePropertyType() {
-        return new MultiCurvePropertyType();
-    }
-
-    /**
-     * Create an instance of {@link CurvePropertyType }
-     * 
-     */
-    public CurvePropertyType createCurvePropertyType() {
-        return new CurvePropertyType();
-    }
-
-    /**
      * Create an instance of {@link AbstractRingPropertyType }
      * 
      */
@@ -109,11 +69,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GeometryPropertyType }
+     * Create an instance of {@link LinearRingType }
      * 
      */
-    public GeometryPropertyType createGeometryPropertyType() {
-        return new GeometryPropertyType();
+    public LinearRingType createLinearRingType() {
+        return new LinearRingType();
     }
 
     /**
@@ -125,19 +85,35 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link MultiCurveType }
-     * 
-     */
-    public MultiCurveType createMultiCurveType() {
-        return new MultiCurveType();
-    }
-
-    /**
      * Create an instance of {@link DirectPositionType }
      * 
      */
     public DirectPositionType createDirectPositionType() {
         return new DirectPositionType();
+    }
+
+    /**
+     * Create an instance of {@link SurfacePropertyType }
+     * 
+     */
+    public SurfacePropertyType createSurfacePropertyType() {
+        return new SurfacePropertyType();
+    }
+
+    /**
+     * Create an instance of {@link CodeType }
+     * 
+     */
+    public CodeType createCodeType() {
+        return new CodeType();
+    }
+
+    /**
+     * Create an instance of {@link MultiCurveType }
+     * 
+     */
+    public MultiCurveType createMultiCurveType() {
+        return new MultiCurveType();
     }
 
     /**
@@ -149,43 +125,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link MultiSurfacePropertyType }
-     * 
-     */
-    public MultiSurfacePropertyType createMultiSurfacePropertyType() {
-        return new MultiSurfacePropertyType();
-    }
-
-    /**
-     * Create an instance of {@link CurveArrayPropertyType }
-     * 
-     */
-    public CurveArrayPropertyType createCurveArrayPropertyType() {
-        return new CurveArrayPropertyType();
-    }
-
-    /**
      * Create an instance of {@link PointType }
      * 
      */
     public PointType createPointType() {
         return new PointType();
-    }
-
-    /**
-     * Create an instance of {@link PointArrayPropertyType }
-     * 
-     */
-    public PointArrayPropertyType createPointArrayPropertyType() {
-        return new PointArrayPropertyType();
-    }
-
-    /**
-     * Create an instance of {@link BoundingShapeType }
-     * 
-     */
-    public BoundingShapeType createBoundingShapeType() {
-        return new BoundingShapeType();
     }
 
     /**
@@ -197,11 +141,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SurfaceArrayPropertyType }
+     * Create an instance of {@link CurvePropertyType }
      * 
      */
-    public SurfaceArrayPropertyType createSurfaceArrayPropertyType() {
-        return new SurfaceArrayPropertyType();
+    public CurvePropertyType createCurvePropertyType() {
+        return new CurvePropertyType();
     }
 
     /**
@@ -221,27 +165,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link MultiPointPropertyType }
+     * Create an instance of {@link LineStringType }
      * 
      */
-    public MultiPointPropertyType createMultiPointPropertyType() {
-        return new MultiPointPropertyType();
+    public LineStringType createLineStringType() {
+        return new LineStringType();
     }
 
     /**
-     * Create an instance of {@link LinearRingType }
+     * Create an instance of {@link BoundingShapeType }
      * 
      */
-    public LinearRingType createLinearRingType() {
-        return new LinearRingType();
-    }
-
-    /**
-     * Create an instance of {@link SurfacePropertyType }
-     * 
-     */
-    public SurfacePropertyType createSurfacePropertyType() {
-        return new SurfacePropertyType();
+    public BoundingShapeType createBoundingShapeType() {
+        return new BoundingShapeType();
     }
 
     /**
@@ -250,6 +186,70 @@ public class ObjectFactory {
      */
     public PolygonType createPolygonType() {
         return new PolygonType();
+    }
+
+    /**
+     * Create an instance of {@link MultiCurvePropertyType }
+     * 
+     */
+    public MultiCurvePropertyType createMultiCurvePropertyType() {
+        return new MultiCurvePropertyType();
+    }
+
+    /**
+     * Create an instance of {@link PointArrayPropertyType }
+     * 
+     */
+    public PointArrayPropertyType createPointArrayPropertyType() {
+        return new PointArrayPropertyType();
+    }
+
+    /**
+     * Create an instance of {@link SurfaceArrayPropertyType }
+     * 
+     */
+    public SurfaceArrayPropertyType createSurfaceArrayPropertyType() {
+        return new SurfaceArrayPropertyType();
+    }
+
+    /**
+     * Create an instance of {@link MultiPointPropertyType }
+     * 
+     */
+    public MultiPointPropertyType createMultiPointPropertyType() {
+        return new MultiPointPropertyType();
+    }
+
+    /**
+     * Create an instance of {@link GeometryArrayPropertyType }
+     * 
+     */
+    public GeometryArrayPropertyType createGeometryArrayPropertyType() {
+        return new GeometryArrayPropertyType();
+    }
+
+    /**
+     * Create an instance of {@link CurveArrayPropertyType }
+     * 
+     */
+    public CurveArrayPropertyType createCurveArrayPropertyType() {
+        return new CurveArrayPropertyType();
+    }
+
+    /**
+     * Create an instance of {@link GeometryPropertyType }
+     * 
+     */
+    public GeometryPropertyType createGeometryPropertyType() {
+        return new GeometryPropertyType();
+    }
+
+    /**
+     * Create an instance of {@link MultiSurfacePropertyType }
+     * 
+     */
+    public MultiSurfacePropertyType createMultiSurfacePropertyType() {
+        return new MultiSurfacePropertyType();
     }
 
     /**
@@ -280,21 +280,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AbstractGeometryType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://www.opengis.net/gml/3.2", name = "AbstractGeometry", substitutionHeadNamespace = "http://www.opengis.net/gml/3.2", substitutionHeadName = "AbstractGML")
-    public JAXBElement<AbstractGeometryType> createAbstractGeometry(AbstractGeometryType value) {
-        return new JAXBElement<AbstractGeometryType>(_AbstractGeometry_QNAME, AbstractGeometryType.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://www.opengis.net/gml/3.2", name = "description")
     public JAXBElement<String> createDescription(String value) {
         return new JAXBElement<String>(_Description_QNAME, String.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AbstractGeometryType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://www.opengis.net/gml/3.2", name = "AbstractGeometry", substitutionHeadNamespace = "http://www.opengis.net/gml/3.2", substitutionHeadName = "AbstractGML")
+    public JAXBElement<AbstractGeometryType> createAbstractGeometry(AbstractGeometryType value) {
+        return new JAXBElement<AbstractGeometryType>(_AbstractGeometry_QNAME, AbstractGeometryType.class, null, value);
     }
 
     /**

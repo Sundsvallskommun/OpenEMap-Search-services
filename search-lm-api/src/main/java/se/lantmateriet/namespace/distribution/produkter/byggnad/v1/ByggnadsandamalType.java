@@ -33,13 +33,13 @@ import javax.xml.bind.annotation.XmlType;
     "huvudandamal"
 })
 @XmlSeeAlso({
-    BostadType.class,
-    VerksamhetType.class,
-    IndustriType.class,
     KomplementbyggnadType.class,
     OvrigByggnadType.class,
+    BostadType.class,
     EkonomibyggnadType.class,
-    SamhallsfunktionType.class
+    SamhallsfunktionType.class,
+    VerksamhetType.class,
+    IndustriType.class
 })
 public abstract class ByggnadsandamalType {
 

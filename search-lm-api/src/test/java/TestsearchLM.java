@@ -9,10 +9,13 @@ import org.codehaus.jackson.node.ArrayNode;
 import org.junit.Test;
 import org.wololo.geojson.Feature;
 
+import com.vividsolutions.jts.geom.Geometry;
+
 import se.lantmateriet.namespace.distribution.products.address.v2.FindAdressResponse;
 import se.lantmateriet.namespace.distribution.produkter.registerbeteckning.v3.RegisterenhetsreferensType;
 import se.riges.lm.rmi.exceptions.LMAccountException;
 import se.riges.search.lm.AddressServiceUtils;
+import se.riges.search.lm.FastighetServiceUtils;
 import se.riges.search.lm.PlacenameServiceUtils;
 import se.riges.search.lm.RegisterServiceUtils;
 
@@ -52,5 +55,11 @@ public class TestsearchLM {
 		List<RegisterenhetsreferensType> result = RegisterServiceUtils.findRegisterbeteckning("SUNDSVALL,ÖRNSKÖLDSVIK AB", "Sundsvall");
 		assertTrue(result.size() == 13);
 		assertTrue(result.get(0).getBeteckning().equals("SUNDSVALL ABBOTEN 1"));
+	}
+	
+	@Test
+	public void testFastighetServiceUtil() throws IOException, LMAccountException {
+		Geometry result = FastighetServiceUtils.getRegisterenhetGeometry("909a6a81-f391-90ec-e040-ed8f66444c3f", "Sundsvall");
+		assertTrue("POLYGON ((687869.627 7022301.919, 687895.424 7022322.445, 687880.8 7022339.365, 687855.434 7022321.123, 687869.627 7022301.919))".equals(result.toString()));
 	}
 }

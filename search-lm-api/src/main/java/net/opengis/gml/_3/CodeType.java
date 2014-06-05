@@ -39,7 +39,7 @@ public class CodeType {
 
     @XmlValue
     protected String value;
-    @XmlAttribute
+    @XmlAttribute(name = "codeSpace")
     @XmlSchemaType(name = "anyURI")
     protected String codeSpace;
 

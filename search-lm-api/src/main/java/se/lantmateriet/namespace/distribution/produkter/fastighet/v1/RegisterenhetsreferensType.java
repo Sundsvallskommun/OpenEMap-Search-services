@@ -17,10 +17,10 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="objektidentitet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}UUIDType" minOccurs="0"/>
- *         &lt;element name="fastighetsnyckel" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}FastighetsnyckelType"/>
+ *         &lt;element name="objektidentitet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}UUIDType" minOccurs="0"/>
+ *         &lt;element name="fastighetsnyckel" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}FastighetsnyckelType"/>
  *         &lt;element name="beteckning" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="typ" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}RegisterenhetstypType"/>
+ *         &lt;element name="typ" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}RegisterenhetstypType"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>

@@ -40,7 +40,7 @@ public class MeasureType {
 
     @XmlValue
     protected double value;
-    @XmlAttribute(required = true)
+    @XmlAttribute(name = "uom", required = true)
     @XmlSchemaType(name = "anyURI")
     protected String uom;
 

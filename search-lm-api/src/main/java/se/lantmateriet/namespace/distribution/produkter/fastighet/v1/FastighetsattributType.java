@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlType;
  * <pre>
  * &lt;complexType name="FastighetsattributType">
  *   &lt;complexContent>
- *     &lt;extension base="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}RegisterenhetsattributType">
+ *     &lt;extension base="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}RegisterenhetsattributType">
  *       &lt;sequence>
  *         &lt;element name="jordnaturenKrono" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="forvarvstillstandGlesbygd" type="{http://www.w3.org/2001/XMLSchema}boolean"/>

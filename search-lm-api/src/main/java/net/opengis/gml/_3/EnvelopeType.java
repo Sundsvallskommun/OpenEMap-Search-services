@@ -41,7 +41,7 @@ public class EnvelopeType {
     protected DirectPositionType lowerCorner;
     @XmlElement(required = true)
     protected DirectPositionType upperCorner;
-    @XmlAttribute
+    @XmlAttribute(name = "srsName")
     @XmlSchemaType(name = "anyURI")
     protected String srsName;
 
