@@ -82,7 +82,7 @@ public class PlacenameServiceUtils extends ServiceUtils {
 		
 		NamntyperType na = new NamntyperType();
 		na.getNamntyp().add(NamntypType.BEBTX);
-		na.getNamntyp().add(NamntypType.BEBTÄTTX);
+		na.getNamntyp().add(NamntypType.BEBTÃ„TTX);
 		ortnamnCriteriaType.setNamntyper(na);
 		MatchFritextType matchFritextType = new MatchFritextType();
 		matchFritextType.setMatch(MatchModeType.CONTAINS);
