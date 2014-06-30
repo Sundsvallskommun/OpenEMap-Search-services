@@ -31,6 +31,7 @@ import se.lantmateriet.namespace.distribution.products.placename.v1.Ortnamnsplac
 import se.lantmateriet.namespace.distribution.products.placename.v1.Placename;
 import se.lantmateriet.namespace.distribution.products.placename.v1.PlacenameService;
 import se.riges.lm.rmi.exceptions.LMAccountException;
+import se.riges.search.lm.util.Municipality;
 
 import com.vividsolutions.jts.geom.Coordinate;
 import com.vividsolutions.jts.geom.GeometryFactory;
@@ -81,7 +82,7 @@ public class PlacenameServiceUtils extends ServiceUtils {
 		
 		NamntyperType na = new NamntyperType();
 		na.getNamntyp().add(NamntypType.BEBTX);
-		na.getNamntyp().add(NamntypType.BEBTÃ„TTX);
+		na.getNamntyp().add(NamntypType.BEBTÄTTX);
 		ortnamnCriteriaType.setNamntyper(na);
 		MatchFritextType matchFritextType = new MatchFritextType();
 		matchFritextType.setMatch(MatchModeType.CONTAINS);
@@ -106,6 +107,7 @@ public class PlacenameServiceUtils extends ServiceUtils {
 			Map<String, Object> properties = new HashMap<String, Object>();
 			properties.put("id", id);
 			properties.put("name", name);
+			properties.put("municipality", Municipality.getMunicipalityMap().get(kommunkod));
 			features.add(new Feature(geoJSONWriter.write(point), properties));
 		}
 		

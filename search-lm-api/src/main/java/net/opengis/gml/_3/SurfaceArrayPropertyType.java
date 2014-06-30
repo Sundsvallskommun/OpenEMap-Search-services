@@ -61,8 +61,8 @@ public class SurfaceArrayPropertyType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link JAXBElement }{@code <}{@link AbstractSurfaceType }{@code >}
      * {@link JAXBElement }{@code <}{@link PolygonType }{@code >}
+     * {@link JAXBElement }{@code <}{@link AbstractSurfaceType }{@code >}
      * 
      * 
      */

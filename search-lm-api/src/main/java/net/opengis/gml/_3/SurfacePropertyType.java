@@ -45,8 +45,8 @@ public class SurfacePropertyType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link AbstractSurfaceType }{@code >}
      *     {@link JAXBElement }{@code <}{@link PolygonType }{@code >}
+     *     {@link JAXBElement }{@code <}{@link AbstractSurfaceType }{@code >}
      *     
      */
     public JAXBElement<? extends AbstractSurfaceType> getAbstractSurface() {
@@ -58,12 +58,12 @@ public class SurfacePropertyType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link AbstractSurfaceType }{@code >}
      *     {@link JAXBElement }{@code <}{@link PolygonType }{@code >}
+     *     {@link JAXBElement }{@code <}{@link AbstractSurfaceType }{@code >}
      *     
      */
     public void setAbstractSurface(JAXBElement<? extends AbstractSurfaceType> value) {
-        this.abstractSurface = ((JAXBElement<? extends AbstractSurfaceType> ) value);
+        this.abstractSurface = value;
     }
 
 }

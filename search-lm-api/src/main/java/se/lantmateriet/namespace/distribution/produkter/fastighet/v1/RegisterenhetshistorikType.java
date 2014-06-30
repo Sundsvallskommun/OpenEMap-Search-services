@@ -17,9 +17,9 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Ursprung" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}RegisterenhetsreferensArrayPropertyType" minOccurs="0"/>
- *         &lt;element name="AvskildMark" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}RegisterenhetsreferensArrayPropertyType" minOccurs="0"/>
- *         &lt;element name="AvregistreradTill" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}RegisterenhetsreferensArrayPropertyType" minOccurs="0"/>
+ *         &lt;element name="Ursprung" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}RegisterenhetsreferensArrayPropertyType" minOccurs="0"/>
+ *         &lt;element name="AvskildMark" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}RegisterenhetsreferensArrayPropertyType" minOccurs="0"/>
+ *         &lt;element name="AvregistreradTill" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}RegisterenhetsreferensArrayPropertyType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>

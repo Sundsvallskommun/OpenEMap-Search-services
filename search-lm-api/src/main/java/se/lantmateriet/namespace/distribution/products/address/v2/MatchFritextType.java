@@ -33,7 +33,7 @@ public class MatchFritextType {
 
     @XmlValue
     protected String value;
-    @XmlAttribute
+    @XmlAttribute(name = "match")
     protected MatchModeType match;
 
     /**

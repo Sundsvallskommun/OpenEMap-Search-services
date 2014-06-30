@@ -22,7 +22,7 @@ import net.opengis.gml._3.AggregationType;
  *   &lt;complexContent>
  *     &lt;extension base="{http://www.opengis.net/gml/3.2}AbstractFeatureType">
  *       &lt;sequence>
- *         &lt;element name="RegisterenhetMember" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}RegisterenhetMemberType" maxOccurs="1000" minOccurs="0"/>
+ *         &lt;element name="RegisterenhetMember" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}RegisterenhetMemberType" maxOccurs="1000" minOccurs="0"/>
  *       &lt;/sequence>
  *       &lt;attGroup ref="{http://www.opengis.net/gml/3.2}AggregationAttributeGroup"/>
  *     &lt;/extension>
@@ -42,7 +42,7 @@ public class RegisterenhetResponseType
 
     @XmlElement(name = "RegisterenhetMember")
     protected List<RegisterenhetMemberType> registerenhetMember;
-    @XmlAttribute
+    @XmlAttribute(name = "aggregationType")
     protected AggregationType aggregationType;
 
     /**

@@ -40,7 +40,7 @@ public class EnhetsomradeType {
     protected int omradesnummer;
     @XmlElement(name = "Punkt")
     protected PointPropertyType punkt;
-    @XmlAttribute
+    @XmlAttribute(name = "markering")
     protected Boolean markering;
 
     /**

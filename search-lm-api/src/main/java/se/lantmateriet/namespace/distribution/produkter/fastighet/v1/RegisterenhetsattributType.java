@@ -21,7 +21,7 @@ import net.opengis.gml._3.PointArrayPropertyType;
  *       &lt;sequence>
  *         &lt;element name="avregistreringsdatum" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="avregistreringsaktbeteckning" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="avregistreringsatgardstyp" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}FastighetsatgardstypType" minOccurs="0"/>
+ *         &lt;element name="avregistreringsatgardstyp" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}FastighetsatgardstypType" minOccurs="0"/>
  *         &lt;element name="lankod" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="kommunkod" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="totalLandarea" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>

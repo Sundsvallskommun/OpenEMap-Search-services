@@ -48,8 +48,8 @@ public class CurvePropertyType {
      * @return
      *     possible object is
      *     {@link JAXBElement }{@code <}{@link AbstractCurveType }{@code >}
-     *     {@link JAXBElement }{@code <}{@link CurveType }{@code >}
      *     {@link JAXBElement }{@code <}{@link LineStringType }{@code >}
+     *     {@link JAXBElement }{@code <}{@link CurveType }{@code >}
      *     
      */
     public JAXBElement<? extends AbstractCurveType> getCurve() {
@@ -62,12 +62,12 @@ public class CurvePropertyType {
      * @param value
      *     allowed object is
      *     {@link JAXBElement }{@code <}{@link AbstractCurveType }{@code >}
-     *     {@link JAXBElement }{@code <}{@link CurveType }{@code >}
      *     {@link JAXBElement }{@code <}{@link LineStringType }{@code >}
+     *     {@link JAXBElement }{@code <}{@link CurveType }{@code >}
      *     
      */
     public void setCurve(JAXBElement<? extends AbstractCurveType> value) {
-        this.curve = ((JAXBElement<? extends AbstractCurveType> ) value);
+        this.curve = value;
     }
 
     public boolean isSetCurve() {

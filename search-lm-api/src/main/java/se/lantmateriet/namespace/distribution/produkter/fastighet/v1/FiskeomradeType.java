@@ -22,7 +22,7 @@ import net.opengis.gml._3.PointPropertyType;
  *         &lt;element name="omradesnummer" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="osakertLage" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="registerkarta" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="ytkvalitet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}YtkvalitetType" minOccurs="0"/>
+ *         &lt;element name="ytkvalitet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}YtkvalitetType" minOccurs="0"/>
  *         &lt;element name="Yta" type="{http://www.opengis.net/gml/3.2}GeometryArrayPropertyType" minOccurs="0"/>
  *         &lt;element name="Centralpunkt" type="{http://www.opengis.net/gml/3.2}PointPropertyType" minOccurs="0"/>
  *       &lt;/sequence>

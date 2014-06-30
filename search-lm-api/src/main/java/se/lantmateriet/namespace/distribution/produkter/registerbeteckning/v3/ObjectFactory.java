@@ -38,75 +38,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link EnhetsomradeType }
-     * 
-     */
-    public EnhetsomradeType createEnhetsomradeType() {
-        return new EnhetsomradeType();
-    }
-
-    /**
-     * Create an instance of {@link RegisterbeteckningFilterType }
-     * 
-     */
-    public RegisterbeteckningFilterType createRegisterbeteckningFilterType() {
-        return new RegisterbeteckningFilterType();
-    }
-
-    /**
-     * Create an instance of {@link SearchStringFilterType }
-     * 
-     */
-    public SearchStringFilterType createSearchStringFilterType() {
-        return new SearchStringFilterType();
-    }
-
-    /**
-     * Create an instance of {@link MatchSearchStringType }
-     * 
-     */
-    public MatchSearchStringType createMatchSearchStringType() {
-        return new MatchSearchStringType();
-    }
-
-    /**
      * Create an instance of {@link RegisterbeteckningType }
      * 
      */
     public RegisterbeteckningType createRegisterbeteckningType() {
         return new RegisterbeteckningType();
-    }
-
-    /**
-     * Create an instance of {@link RegisterbeteckningMemberType }
-     * 
-     */
-    public RegisterbeteckningMemberType createRegisterbeteckningMemberType() {
-        return new RegisterbeteckningMemberType();
-    }
-
-    /**
-     * Create an instance of {@link RegisterenhetsreferensType }
-     * 
-     */
-    public RegisterenhetsreferensType createRegisterenhetsreferensType() {
-        return new RegisterenhetsreferensType();
-    }
-
-    /**
-     * Create an instance of {@link GetRegisterbeteckningRequestType }
-     * 
-     */
-    public GetRegisterbeteckningRequestType createGetRegisterbeteckningRequestType() {
-        return new GetRegisterbeteckningRequestType();
-    }
-
-    /**
-     * Create an instance of {@link RegisterbeteckningsreferensResponseType }
-     * 
-     */
-    public RegisterbeteckningsreferensResponseType createRegisterbeteckningsreferensResponseType() {
-        return new RegisterbeteckningsreferensResponseType();
     }
 
     /**
@@ -118,11 +54,75 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link RegisterbeteckningsreferensResponseType }
+     * 
+     */
+    public RegisterbeteckningsreferensResponseType createRegisterbeteckningsreferensResponseType() {
+        return new RegisterbeteckningsreferensResponseType();
+    }
+
+    /**
      * Create an instance of {@link FindRegisterbeteckningRequestType }
      * 
      */
     public FindRegisterbeteckningRequestType createFindRegisterbeteckningRequestType() {
         return new FindRegisterbeteckningRequestType();
+    }
+
+    /**
+     * Create an instance of {@link GetRegisterbeteckningRequestType }
+     * 
+     */
+    public GetRegisterbeteckningRequestType createGetRegisterbeteckningRequestType() {
+        return new GetRegisterbeteckningRequestType();
+    }
+
+    /**
+     * Create an instance of {@link RegisterbeteckningFilterType }
+     * 
+     */
+    public RegisterbeteckningFilterType createRegisterbeteckningFilterType() {
+        return new RegisterbeteckningFilterType();
+    }
+
+    /**
+     * Create an instance of {@link MatchSearchStringType }
+     * 
+     */
+    public MatchSearchStringType createMatchSearchStringType() {
+        return new MatchSearchStringType();
+    }
+
+    /**
+     * Create an instance of {@link RegisterenhetsreferensType }
+     * 
+     */
+    public RegisterenhetsreferensType createRegisterenhetsreferensType() {
+        return new RegisterenhetsreferensType();
+    }
+
+    /**
+     * Create an instance of {@link EnhetsomradeType }
+     * 
+     */
+    public EnhetsomradeType createEnhetsomradeType() {
+        return new EnhetsomradeType();
+    }
+
+    /**
+     * Create an instance of {@link RegisterbeteckningMemberType }
+     * 
+     */
+    public RegisterbeteckningMemberType createRegisterbeteckningMemberType() {
+        return new RegisterbeteckningMemberType();
+    }
+
+    /**
+     * Create an instance of {@link SearchStringFilterType }
+     * 
+     */
+    public SearchStringFilterType createSearchStringFilterType() {
+        return new SearchStringFilterType();
     }
 
     /**

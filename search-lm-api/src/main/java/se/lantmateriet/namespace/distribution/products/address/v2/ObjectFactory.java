@@ -36,11 +36,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link FritextCriteriaType }
+     * Create an instance of {@link FindAdressreferensResponse }
      * 
      */
-    public FritextCriteriaType createFritextCriteriaType() {
-        return new FritextCriteriaType();
+    public FindAdressreferensResponse createFindAdressreferensResponse() {
+        return new FindAdressreferensResponse();
     }
 
     /**
@@ -52,11 +52,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AdressCriteriaType }
+     * Create an instance of {@link FindAdressreferensRequest }
      * 
      */
-    public AdressCriteriaType createAdressCriteriaType() {
-        return new AdressCriteriaType();
+    public FindAdressreferensRequest createFindAdressreferensRequest() {
+        return new FindAdressreferensRequest();
+    }
+
+    /**
+     * Create an instance of {@link FritextCriteriaType }
+     * 
+     */
+    public FritextCriteriaType createFritextCriteriaType() {
+        return new FritextCriteriaType();
     }
 
     /**
@@ -68,11 +76,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link FindAdressResponse }
+     * Create an instance of {@link AdressCriteriaType }
      * 
      */
-    public FindAdressResponse createFindAdressResponse() {
-        return new FindAdressResponse();
+    public AdressCriteriaType createAdressCriteriaType() {
+        return new AdressCriteriaType();
     }
 
     /**
@@ -84,19 +92,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link FindAdressreferensResponse }
+     * Create an instance of {@link FindAdressResponse }
      * 
      */
-    public FindAdressreferensResponse createFindAdressreferensResponse() {
-        return new FindAdressreferensResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindAdressreferensRequest }
-     * 
-     */
-    public FindAdressreferensRequest createFindAdressreferensRequest() {
-        return new FindAdressreferensRequest();
+    public FindAdressResponse createFindAdressResponse() {
+        return new FindAdressResponse();
     }
 
     /**

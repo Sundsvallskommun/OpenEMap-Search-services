@@ -17,9 +17,9 @@ import javax.xml.bind.annotation.XmlType;
  * <pre>
  * &lt;complexType name="FastighetType">
  *   &lt;complexContent>
- *     &lt;extension base="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}RegisterenhetType">
+ *     &lt;extension base="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}RegisterenhetType">
  *       &lt;sequence>
- *         &lt;element name="Skattetal" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}SkattetalType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Skattetal" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}SkattetalType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/extension>
  *   &lt;/complexContent>

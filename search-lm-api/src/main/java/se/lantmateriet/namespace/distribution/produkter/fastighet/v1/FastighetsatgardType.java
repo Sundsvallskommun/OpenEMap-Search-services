@@ -22,9 +22,9 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="atgardsnummer" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="atgardstidpunkt" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="anteckning" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="atgardstyp" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}FastighetsatgardstypType" maxOccurs="3" minOccurs="0"/>
+ *         &lt;element name="atgardstyp" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}FastighetsatgardstypType" maxOccurs="3" minOccurs="0"/>
  *         &lt;element name="littera" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="Fastighetsarende" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1}FastighetsarendeType" minOccurs="0"/>
+ *         &lt;element name="Fastighetsarende" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}FastighetsarendeType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>

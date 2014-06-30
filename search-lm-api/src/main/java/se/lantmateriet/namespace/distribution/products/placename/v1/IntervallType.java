@@ -30,9 +30,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "IntervallType")
 public class IntervallType {
 
-    @XmlAttribute(required = true)
+    @XmlAttribute(name = "startindex", required = true)
     protected BigInteger startindex;
-    @XmlAttribute(required = true)
+    @XmlAttribute(name = "slutindex", required = true)
     protected BigInteger slutindex;
 
     /**

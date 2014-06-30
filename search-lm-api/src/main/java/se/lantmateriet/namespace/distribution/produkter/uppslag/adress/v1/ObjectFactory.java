@@ -35,19 +35,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link FindRegisterenhetRequestType }
-     * 
-     */
-    public FindRegisterenhetRequestType createFindRegisterenhetRequestType() {
-        return new FindRegisterenhetRequestType();
-    }
-
-    /**
      * Create an instance of {@link RegisterenhetsreferensResponseType }
      * 
      */
     public RegisterenhetsreferensResponseType createRegisterenhetsreferensResponseType() {
         return new RegisterenhetsreferensResponseType();
+    }
+
+    /**
+     * Create an instance of {@link FindRegisterenhetRequestType }
+     * 
+     */
+    public FindRegisterenhetRequestType createFindRegisterenhetRequestType() {
+        return new FindRegisterenhetRequestType();
     }
 
     /**
@@ -59,19 +59,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RegisterenhetsreferensType }
-     * 
-     */
-    public RegisterenhetsreferensType createRegisterenhetsreferensType() {
-        return new RegisterenhetsreferensType();
-    }
-
-    /**
      * Create an instance of {@link MatchSearchStringType }
      * 
      */
     public MatchSearchStringType createMatchSearchStringType() {
         return new MatchSearchStringType();
+    }
+
+    /**
+     * Create an instance of {@link RegisterenhetsreferensType }
+     * 
+     */
+    public RegisterenhetsreferensType createRegisterenhetsreferensType() {
+        return new RegisterenhetsreferensType();
     }
 
     /**

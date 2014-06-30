@@ -48,10 +48,10 @@ public abstract class AbstractGeometryType
     extends AbstractGMLType
 {
 
-    @XmlAttribute
+    @XmlAttribute(name = "srsName")
     @XmlSchemaType(name = "anyURI")
     protected String srsName;
-    @XmlAttribute
+    @XmlAttribute(name = "srsDimension")
     @XmlSchemaType(name = "positiveInteger")
     protected BigInteger srsDimension;
 

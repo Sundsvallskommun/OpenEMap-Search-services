@@ -4,6 +4,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
 
+import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.codehaus.jackson.node.JsonNodeFactory;
 import org.codehaus.jackson.node.ObjectNode;
 import org.slf4j.Logger;
@@ -17,15 +18,13 @@ public class GenericExceptionMapper implements ExceptionMapper< Exception > {
 	
     @Override
     public Response toResponse(Exception e) {
-    	LOG.debug("Handling exception using GenericExceptionMapper", e);
+    	LOG.error("Unhandled exception will be mapped to JSON and sent as a HTTP 500 reponse", e);
     	ObjectNode message = factory.objectNode();
 
 		message.put("success", false);
     	message.put("message", e.getMessage());
-    	//StringWriter sw = new StringWriter();
-    	//PrintWriter pw = new PrintWriter(sw);
-    	//e.printStackTrace(pw);
-    	//message.put("stackTrace", sw.toString());
+    	message.put("exceptionName", e.getClass().getName());
+    	message.put("rootCauseMessage", ExceptionUtils.getRootCauseMessage(e));
     	
         return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(message).build();
     }

@@ -57,11 +57,11 @@ public class FastighetServiceUtils extends ServiceUtils {
 		if (service == null) {
 			URL url = null;
 			try {
-				url = new URL("http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1/fastighet-1.4.wsdl");
+				url = new URL("http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5/fastighet-1.5.0.wsdl");
 			} catch (MalformedURLException e) {
 				throw new RuntimeException(e);
 			}
-			QName qName = new QName("http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1", "FastighetService");
+			QName qName = new QName("http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5", "FastighetService");
 			
 			service = new FastighetService(url, qName);
 			// NOTE: enable next line to trace SOAP XML

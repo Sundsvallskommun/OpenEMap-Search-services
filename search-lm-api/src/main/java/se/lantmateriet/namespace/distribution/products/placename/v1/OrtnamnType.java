@@ -43,10 +43,10 @@ public class OrtnamnType
 {
 
     @XmlElementRefs({
-        @XmlElementRef(name = "namn", namespace = "http://namespace.lantmateriet.se/distribution/products/placename/v1", type = JAXBElement.class),
-        @XmlElementRef(name = "sprak", namespace = "http://namespace.lantmateriet.se/distribution/products/placename/v1", type = JAXBElement.class),
-        @XmlElementRef(name = "id", namespace = "http://namespace.lantmateriet.se/distribution/products/placename/v1", type = JAXBElement.class),
-        @XmlElementRef(name = "placering", namespace = "http://namespace.lantmateriet.se/distribution/products/placename/v1", type = JAXBElement.class)
+        @XmlElementRef(name = "placering", namespace = "http://namespace.lantmateriet.se/distribution/products/placename/v1", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "id", namespace = "http://namespace.lantmateriet.se/distribution/products/placename/v1", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "sprak", namespace = "http://namespace.lantmateriet.se/distribution/products/placename/v1", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "namn", namespace = "http://namespace.lantmateriet.se/distribution/products/placename/v1", type = JAXBElement.class, required = false)
     })
     protected List<JAXBElement<?>> rest;
 
@@ -78,9 +78,9 @@ public class OrtnamnType
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
      * {@link JAXBElement }{@code <}{@link Long }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
      * {@link JAXBElement }{@code <}{@link OrtnamnsplaceringType }{@code >}
      * 
      * 

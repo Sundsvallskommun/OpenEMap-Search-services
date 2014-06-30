@@ -63,16 +63,16 @@ public class GeometryArrayPropertyType {
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link JAXBElement }{@code <}{@link AbstractGeometricPrimitiveType }{@code >}
-     * {@link JAXBElement }{@code <}{@link AbstractGeometricAggregateType }{@code >}
-     * {@link JAXBElement }{@code <}{@link LineStringType }{@code >}
-     * {@link JAXBElement }{@code <}{@link PolygonType }{@code >}
-     * {@link JAXBElement }{@code <}{@link MultiCurveType }{@code >}
      * {@link JAXBElement }{@code <}{@link AbstractGeometryType }{@code >}
-     * {@link JAXBElement }{@code <}{@link AbstractCurveType }{@code >}
-     * {@link JAXBElement }{@code <}{@link MultiSurfaceType }{@code >}
-     * {@link JAXBElement }{@code <}{@link AbstractSurfaceType }{@code >}
      * {@link JAXBElement }{@code <}{@link MultiPointType }{@code >}
+     * {@link JAXBElement }{@code <}{@link MultiCurveType }{@code >}
+     * {@link JAXBElement }{@code <}{@link MultiSurfaceType }{@code >}
      * {@link JAXBElement }{@code <}{@link PointType }{@code >}
+     * {@link JAXBElement }{@code <}{@link LineStringType }{@code >}
+     * {@link JAXBElement }{@code <}{@link AbstractSurfaceType }{@code >}
+     * {@link JAXBElement }{@code <}{@link AbstractCurveType }{@code >}
+     * {@link JAXBElement }{@code <}{@link PolygonType }{@code >}
+     * {@link JAXBElement }{@code <}{@link AbstractGeometricAggregateType }{@code >}
      * 
      * 
      */
