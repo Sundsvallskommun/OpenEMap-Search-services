@@ -8,13 +8,13 @@ public class Municipality {
 		this.init();
 	}
 	private void init() {
-		municipalityMap.put(2260,"Ånge");
-		municipalityMap.put(2262,"Timrå");
-		municipalityMap.put(2280,"Härnösand");
+		municipalityMap.put(2260,"Ã…nge");
+		municipalityMap.put(2262,"TimrÃ¥");
+		municipalityMap.put(2280,"HÃ¤rnÃ¶sand");
 		municipalityMap.put(2281,"Sundsvall");
 		municipalityMap.put(2282,"Kramfors");
-		municipalityMap.put(2283,"Sollefteå");
-		municipalityMap.put(2284,"Örnsköldsvik");
+		municipalityMap.put(2283,"SollefteÃ¥");
+		municipalityMap.put(2284,"Ã–rnskÃ¶ldsvik");
 	}
 
 	public static Map<Integer,String> getMunicipalityMap() {
