@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class Municipality {
 	private static Map<Integer,String> municipalityMap = new HashMap<Integer,String>();
-	Municipality() {
+	public Municipality() {
 		this.init();
 	}
 	private void init() {

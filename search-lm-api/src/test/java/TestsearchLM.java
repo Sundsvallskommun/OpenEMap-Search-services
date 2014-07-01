@@ -28,6 +28,11 @@ public class TestsearchLM {
 		features =  PlacenameServiceUtils.findOrt("2280,2281", "sand", "sundsvall");
 		assertTrue(features.size() == 23);
 	}
+	@Test
+	public void testPlacenameServiceUtilUsingNUll() throws IOException, LMAccountException {
+		List<Feature> features =  PlacenameServiceUtils.findOrt(null, "ortv", "sundsvall");
+		assertTrue(features.size() == 7);
+	}
 	
 	@Test
 	public void testAdressServiceUtils() throws IOException, LMAccountException {

@@ -107,7 +107,14 @@ public class PlacenameServiceUtils extends ServiceUtils {
 			Map<String, Object> properties = new HashMap<String, Object>();
 			properties.put("id", id);
 			properties.put("name", name);
-			properties.put("municipality", Municipality.getMunicipalityMap().get(kommunkod));
+			if ( kommunkod != null ) {
+				Municipality m = new Municipality();
+				String kommunNamn =  m.getMunicipalityMap().get(kommunkod);
+				properties.put("municipality", kommunNamn);
+			}
+			else {
+				properties.put("municipality",""); 
+			}
 			features.add(new Feature(geoJSONWriter.write(point), properties));
 		}
 		
