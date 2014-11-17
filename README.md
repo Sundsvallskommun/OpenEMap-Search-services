@@ -1,4 +1,4 @@
-OpenEMap-Search-backend
+OpenEMap-Search-services
 =======================
 
-Open eMap search back end med tjänster för sökning mot bla Lantmäteriet
+Open eMap search services with search services for searching againts Lantmäteriets services
