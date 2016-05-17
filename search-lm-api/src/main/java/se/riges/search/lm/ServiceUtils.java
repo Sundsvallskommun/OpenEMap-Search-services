@@ -44,32 +44,49 @@ public class ServiceUtils {
 	
 	static String config = "config.properties";
 	
-	static void setAuth(BindingProvider binding, String lmUser) throws IOException, LMAccountException {
-		
-		Map<String, Object> requestContext = binding.getRequestContext();
-		
-		Properties props = new java.util.Properties();
-		InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(config);
-		
-		String userCredentials = "";
-		if (null == lmUser || lmUser.equals("")){
-			LOG.error("LM access not allowed must specify lmUser");
-			throw new LMAccountException();
-		} else {
-			//LOG.info("Loading LM auth from " + config);
-			props.load(inputStream);
-			userCredentials = props.getProperty(lmUser.toLowerCase());
-			if (userCredentials == null)
+	static boolean isInitialized = false;
+	static String username;
+	static String password;
+	
+	public static String getUsername(String lmUser) throws LMAccountException, IOException {
+		init(lmUser);
+		return username;
+	}
+	
+	public static String getPassword(String lmUser) throws LMAccountException, IOException {
+		init(lmUser);
+		return password;
+	}
+	
+	static void init(String lmUser) throws LMAccountException, IOException {
+		if (!isInitialized) {
+			Properties props = new java.util.Properties();
+			InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(config);
+			String userCredentials = "";
+			if (null == lmUser || lmUser.equals("")){
+				LOG.error("LM access not allowed must specify lmUser");
 				throw new LMAccountException();
+			} else {
+				//LOG.info("Loading LM auth from " + config);
+				props.load(inputStream);
+				userCredentials = props.getProperty(lmUser.toLowerCase());
+				if (userCredentials == null)
+					throw new LMAccountException();
+			}
+			
+			if (!userCredentials.isEmpty()){
+				String[] userInfo =  userCredentials.split(":");
+				username = userInfo[1].trim();
+				password = userInfo[3].trim();
+			}
 		}
-		
-		if (!userCredentials.isEmpty()){
-			String[] userInfo =  userCredentials.split(":");
-			String username = userInfo[1];
-			String password = userInfo[3];
-			requestContext.put(BindingProvider.USERNAME_PROPERTY, username.trim());
-			requestContext.put(BindingProvider.PASSWORD_PROPERTY, password.trim());
-		}
+	}
+	
+	static void setAuth(BindingProvider binding, String lmUser) throws IOException, LMAccountException {
+		init(lmUser);
+		Map<String, Object> requestContext = binding.getRequestContext();
+		requestContext.put(BindingProvider.USERNAME_PROPERTY, username);
+		requestContext.put(BindingProvider.PASSWORD_PROPERTY, password);
 	}
 
 	static void trace(Service service) {
