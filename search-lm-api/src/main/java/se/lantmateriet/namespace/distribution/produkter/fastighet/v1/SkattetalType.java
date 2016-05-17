@@ -4,6 +4,7 @@ package se.lantmateriet.namespace.distribution.produkter.fastighet.v1;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -18,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="skattetal" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="skattetalssort" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}SkattetalssortType"/>
+ *         &lt;element name="skattetalssort" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}SkattetalssortType"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -37,6 +38,7 @@ public class SkattetalType {
     @XmlElement(required = true)
     protected String skattetal;
     @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
     protected SkattetalssortType skattetalssort;
 
     /**

@@ -1,4 +1,4 @@
-wsimport -extension -Xnocompile -d src/main/java http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5/fastighet-1.5.0.wsdl
+wsimport -extension -Xnocompile -d src/main/java http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6/fastighet-1.6.1.wsdl
 wsimport -extension -Xnocompile -d src/main/java http://namespace.lantmateriet.se/distribution/produkter/uppslag/adress/v1/adress-1.1.wsdl
 wsimport -extension -Xnocompile -d src/main/java http://namespace.lantmateriet.se/distribution/produkter/registerbeteckning/v3/registerbeteckning-3.2.wsdl
 wsimport -extension -Xnocompile -d src/main/java -b bindings.xjc http://namespace.lantmateriet.se/distribution/products/address/v2/address-2.0.wsdl

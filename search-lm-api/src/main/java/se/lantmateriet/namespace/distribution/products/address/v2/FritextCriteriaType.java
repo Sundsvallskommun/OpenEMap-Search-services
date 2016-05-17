@@ -4,6 +4,7 @@ package se.lantmateriet.namespace.distribution.products.address.v2;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -37,6 +38,7 @@ public class FritextCriteriaType {
     @XmlElement(required = true)
     protected MatchFritextType fritext;
     @XmlElement(defaultValue = "100")
+    @XmlSchemaType(name = "integer")
     protected Integer maxAntal;
 
     /**

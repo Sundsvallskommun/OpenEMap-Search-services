@@ -4,6 +4,7 @@ package se.lantmateriet.namespace.distribution.products.placename.v1;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import net.opengis.gml.v_3_1_1.profiles.gmlsfprofile.v_1_0_0.AbstractFeatureType;
 import net.opengis.gml.v_3_1_1.profiles.gmlsfprofile.v_1_0_0.PointType;
@@ -45,6 +46,7 @@ public class OrtnamnsplaceringType
     protected int lanskod;
     protected int kommunkod;
     @XmlElement(required = true, nillable = true)
+    @XmlSchemaType(name = "string")
     protected NamntypType namntyp;
     @XmlElement(required = true)
     protected PointType punkt;

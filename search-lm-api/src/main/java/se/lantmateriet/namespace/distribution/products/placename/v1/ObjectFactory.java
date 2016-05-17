@@ -24,14 +24,14 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _OrtnamnCriteria_QNAME = new QName("http://namespace.lantmateriet.se/distribution/products/placename/v1", "OrtnamnCriteria");
     private final static QName _FritextCriteria_QNAME = new QName("http://namespace.lantmateriet.se/distribution/products/placename/v1", "FritextCriteria");
     private final static QName _Ortnamnsreferens_QNAME = new QName("http://namespace.lantmateriet.se/distribution/products/placename/v1", "Ortnamnsreferens");
     private final static QName _Ortnamn_QNAME = new QName("http://namespace.lantmateriet.se/distribution/products/placename/v1", "Ortnamn");
-    private final static QName _OrtnamnTypePlacering_QNAME = new QName("http://namespace.lantmateriet.se/distribution/products/placename/v1", "placering");
-    private final static QName _OrtnamnTypeId_QNAME = new QName("http://namespace.lantmateriet.se/distribution/products/placename/v1", "id");
-    private final static QName _OrtnamnTypeSprak_QNAME = new QName("http://namespace.lantmateriet.se/distribution/products/placename/v1", "sprak");
+    private final static QName _OrtnamnCriteria_QNAME = new QName("http://namespace.lantmateriet.se/distribution/products/placename/v1", "OrtnamnCriteria");
     private final static QName _OrtnamnTypeNamn_QNAME = new QName("http://namespace.lantmateriet.se/distribution/products/placename/v1", "namn");
+    private final static QName _OrtnamnTypePlacering_QNAME = new QName("http://namespace.lantmateriet.se/distribution/products/placename/v1", "placering");
+    private final static QName _OrtnamnTypeSprak_QNAME = new QName("http://namespace.lantmateriet.se/distribution/products/placename/v1", "sprak");
+    private final static QName _OrtnamnTypeId_QNAME = new QName("http://namespace.lantmateriet.se/distribution/products/placename/v1", "id");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: se.lantmateriet.namespace.distribution.products.placename.v1
@@ -41,11 +41,51 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link FindOrtnamnsreferensResponse }
+     * 
+     */
+    public FindOrtnamnsreferensResponse createFindOrtnamnsreferensResponse() {
+        return new FindOrtnamnsreferensResponse();
+    }
+
+    /**
+     * Create an instance of {@link OrtnamnsreferensType }
+     * 
+     */
+    public OrtnamnsreferensType createOrtnamnsreferensType() {
+        return new OrtnamnsreferensType();
+    }
+
+    /**
      * Create an instance of {@link OrtnamnCriteriaType }
      * 
      */
     public OrtnamnCriteriaType createOrtnamnCriteriaType() {
         return new OrtnamnCriteriaType();
+    }
+
+    /**
+     * Create an instance of {@link FindOrtnamnRequest }
+     * 
+     */
+    public FindOrtnamnRequest createFindOrtnamnRequest() {
+        return new FindOrtnamnRequest();
+    }
+
+    /**
+     * Create an instance of {@link FritextCriteriaType }
+     * 
+     */
+    public FritextCriteriaType createFritextCriteriaType() {
+        return new FritextCriteriaType();
+    }
+
+    /**
+     * Create an instance of {@link FindOrtnamnResponse }
+     * 
+     */
+    public FindOrtnamnResponse createFindOrtnamnResponse() {
+        return new FindOrtnamnResponse();
     }
 
     /**
@@ -65,67 +105,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link FritextCriteriaType }
-     * 
-     */
-    public FritextCriteriaType createFritextCriteriaType() {
-        return new FritextCriteriaType();
-    }
-
-    /**
-     * Create an instance of {@link OrtnamnsreferensType }
-     * 
-     */
-    public OrtnamnsreferensType createOrtnamnsreferensType() {
-        return new OrtnamnsreferensType();
-    }
-
-    /**
-     * Create an instance of {@link FindOrtnamnResponse }
-     * 
-     */
-    public FindOrtnamnResponse createFindOrtnamnResponse() {
-        return new FindOrtnamnResponse();
-    }
-
-    /**
-     * Create an instance of {@link FindOrtnamnRequest }
-     * 
-     */
-    public FindOrtnamnRequest createFindOrtnamnRequest() {
-        return new FindOrtnamnRequest();
-    }
-
-    /**
-     * Create an instance of {@link FindOrtnamnsreferensResponse }
-     * 
-     */
-    public FindOrtnamnsreferensResponse createFindOrtnamnsreferensResponse() {
-        return new FindOrtnamnsreferensResponse();
-    }
-
-    /**
-     * Create an instance of {@link MatchFritextType }
-     * 
-     */
-    public MatchFritextType createMatchFritextType() {
-        return new MatchFritextType();
-    }
-
-    /**
      * Create an instance of {@link NamntyperType }
      * 
      */
     public NamntyperType createNamntyperType() {
         return new NamntyperType();
-    }
-
-    /**
-     * Create an instance of {@link OrtnamnsplaceringType }
-     * 
-     */
-    public OrtnamnsplaceringType createOrtnamnsplaceringType() {
-        return new OrtnamnsplaceringType();
     }
 
     /**
@@ -137,12 +121,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link OrtnamnCriteriaType }{@code >}}
+     * Create an instance of {@link OrtnamnsplaceringType }
      * 
      */
-    @XmlElementDecl(namespace = "http://namespace.lantmateriet.se/distribution/products/placename/v1", name = "OrtnamnCriteria")
-    public JAXBElement<OrtnamnCriteriaType> createOrtnamnCriteria(OrtnamnCriteriaType value) {
-        return new JAXBElement<OrtnamnCriteriaType>(_OrtnamnCriteria_QNAME, OrtnamnCriteriaType.class, null, value);
+    public OrtnamnsplaceringType createOrtnamnsplaceringType() {
+        return new OrtnamnsplaceringType();
+    }
+
+    /**
+     * Create an instance of {@link MatchFritextType }
+     * 
+     */
+    public MatchFritextType createMatchFritextType() {
+        return new MatchFritextType();
     }
 
     /**
@@ -173,21 +164,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link OrtnamnCriteriaType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://namespace.lantmateriet.se/distribution/products/placename/v1", name = "OrtnamnCriteria")
+    public JAXBElement<OrtnamnCriteriaType> createOrtnamnCriteria(OrtnamnCriteriaType value) {
+        return new JAXBElement<OrtnamnCriteriaType>(_OrtnamnCriteria_QNAME, OrtnamnCriteriaType.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://namespace.lantmateriet.se/distribution/products/placename/v1", name = "namn", scope = OrtnamnType.class)
+    public JAXBElement<String> createOrtnamnTypeNamn(String value) {
+        return new JAXBElement<String>(_OrtnamnTypeNamn_QNAME, String.class, OrtnamnType.class, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link OrtnamnsplaceringType }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://namespace.lantmateriet.se/distribution/products/placename/v1", name = "placering", scope = OrtnamnType.class)
     public JAXBElement<OrtnamnsplaceringType> createOrtnamnTypePlacering(OrtnamnsplaceringType value) {
         return new JAXBElement<OrtnamnsplaceringType>(_OrtnamnTypePlacering_QNAME, OrtnamnsplaceringType.class, OrtnamnType.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://namespace.lantmateriet.se/distribution/products/placename/v1", name = "id", scope = OrtnamnType.class)
-    public JAXBElement<Long> createOrtnamnTypeId(Long value) {
-        return new JAXBElement<Long>(_OrtnamnTypeId_QNAME, Long.class, OrtnamnType.class, value);
     }
 
     /**
@@ -200,12 +200,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Long }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://namespace.lantmateriet.se/distribution/products/placename/v1", name = "namn", scope = OrtnamnType.class)
-    public JAXBElement<String> createOrtnamnTypeNamn(String value) {
-        return new JAXBElement<String>(_OrtnamnTypeNamn_QNAME, String.class, OrtnamnType.class, value);
+    @XmlElementDecl(namespace = "http://namespace.lantmateriet.se/distribution/products/placename/v1", name = "id", scope = OrtnamnType.class)
+    public JAXBElement<Long> createOrtnamnTypeId(Long value) {
+        return new JAXBElement<Long>(_OrtnamnTypeId_QNAME, Long.class, OrtnamnType.class, value);
     }
 
 }

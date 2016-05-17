@@ -6,6 +6,7 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import net.opengis.gml._3.AbstractFeatureType;
 
@@ -57,6 +58,7 @@ public class RegisterbeteckningType
     @XmlElement(required = true)
     protected String fastighetsnyckel;
     @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
     protected ObjektstatusType objektstatus;
     @XmlElement(required = true)
     protected String registeromrade;

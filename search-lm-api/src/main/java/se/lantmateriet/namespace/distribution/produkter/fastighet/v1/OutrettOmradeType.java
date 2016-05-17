@@ -4,6 +4,7 @@ package se.lantmateriet.namespace.distribution.produkter.fastighet.v1;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import net.opengis.gml._3.GeometryArrayPropertyType;
 import net.opengis.gml._3.PointPropertyType;
@@ -21,9 +22,9 @@ import net.opengis.gml._3.PointPropertyType;
  *       &lt;sequence>
  *         &lt;element name="omradesnummer" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="registeromrade" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="typAvOutrettOmrade" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}TypAvOutrettOmradeType"/>
+ *         &lt;element name="typAvOutrettOmrade" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}TypAvOutrettOmradeType"/>
  *         &lt;element name="registerkarta" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="ytkvalitet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}YtkvalitetType" minOccurs="0"/>
+ *         &lt;element name="ytkvalitet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}YtkvalitetType" minOccurs="0"/>
  *         &lt;element name="Yta" type="{http://www.opengis.net/gml/3.2}GeometryArrayPropertyType" minOccurs="0"/>
  *         &lt;element name="Centralpunkt" type="{http://www.opengis.net/gml/3.2}PointPropertyType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -49,8 +50,10 @@ public class OutrettOmradeType {
     protected int omradesnummer;
     protected String registeromrade;
     @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
     protected TypAvOutrettOmradeType typAvOutrettOmrade;
     protected String registerkarta;
+    @XmlSchemaType(name = "string")
     protected YtkvalitetType ytkvalitet;
     @XmlElement(name = "Yta")
     protected GeometryArrayPropertyType yta;

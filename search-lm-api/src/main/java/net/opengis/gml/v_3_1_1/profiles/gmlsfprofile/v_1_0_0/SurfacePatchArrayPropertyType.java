@@ -60,8 +60,8 @@ public class SurfacePatchArrayPropertyType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link JAXBElement }{@code <}{@link AbstractSurfacePatchType }{@code >}
      * {@link JAXBElement }{@code <}{@link PolygonPatchType }{@code >}
+     * {@link JAXBElement }{@code <}{@link AbstractSurfacePatchType }{@code >}
      * 
      * 
      */

@@ -4,6 +4,7 @@ package se.lantmateriet.namespace.distribution.produkter.byggnad.v1;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -40,6 +41,7 @@ public class ByggnadsnamnType {
     @XmlElement(required = true)
     protected String namn;
     @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
     protected NamntypType namntyp;
 
     /**

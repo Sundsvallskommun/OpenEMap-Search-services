@@ -41,9 +41,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AbstractGeometryType")
 @XmlSeeAlso({
-    LinearRingType.class,
     AbstractGeometricAggregateType.class,
-    AbstractGeometricPrimitiveType.class
+    AbstractGeometricPrimitiveType.class,
+    LinearRingType.class
 })
 public abstract class AbstractGeometryType
     extends AbstractGMLType

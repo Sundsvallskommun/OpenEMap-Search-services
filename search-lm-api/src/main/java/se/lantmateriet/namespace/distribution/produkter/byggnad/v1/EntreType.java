@@ -4,6 +4,7 @@ package se.lantmateriet.namespace.distribution.produkter.byggnad.v1;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -41,10 +42,13 @@ import javax.xml.bind.annotation.XmlType;
 public class EntreType {
 
     @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
     protected ObjektstatusType objektstatus;
     @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
     protected HisstatusType hiss;
     @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
     protected EntretypType entretyp;
     protected String adressid;
     protected String objektidentitetAdress;

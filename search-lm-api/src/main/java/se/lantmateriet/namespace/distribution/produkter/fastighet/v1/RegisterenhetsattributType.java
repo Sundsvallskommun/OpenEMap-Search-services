@@ -4,6 +4,7 @@ package se.lantmateriet.namespace.distribution.produkter.fastighet.v1;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 import net.opengis.gml._3.PointArrayPropertyType;
@@ -21,12 +22,11 @@ import net.opengis.gml._3.PointArrayPropertyType;
  *       &lt;sequence>
  *         &lt;element name="avregistreringsdatum" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="avregistreringsaktbeteckning" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="avregistreringsatgardstyp" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}FastighetsatgardstypType" minOccurs="0"/>
+ *         &lt;element name="avregistreringsatgardstyp" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}FastighetsatgardstypType" minOccurs="0"/>
  *         &lt;element name="lankod" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="kommunkod" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="totalLandarea" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
  *         &lt;element name="totalVattenarea" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
- *         &lt;element name="totalFiskeomradesarea" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
  *         &lt;element name="totalRegisterarea" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
  *         &lt;element name="totalAreaOsaker" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *         &lt;element name="tredimensionell" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
@@ -51,7 +51,6 @@ import net.opengis.gml._3.PointArrayPropertyType;
     "kommunkod",
     "totalLandarea",
     "totalVattenarea",
-    "totalFiskeomradesarea",
     "totalRegisterarea",
     "totalAreaOsaker",
     "tredimensionell",
@@ -61,13 +60,14 @@ import net.opengis.gml._3.PointArrayPropertyType;
     "senasteAndring"
 })
 @XmlSeeAlso({
-    SamfallighetsattributType.class,
-    FastighetsattributType.class
+    FastighetsattributType.class,
+    SamfallighetsattributType.class
 })
 public abstract class RegisterenhetsattributType {
 
     protected String avregistreringsdatum;
     protected String avregistreringsaktbeteckning;
+    @XmlSchemaType(name = "string")
     protected FastighetsatgardstypType avregistreringsatgardstyp;
     @XmlElement(required = true)
     protected String lankod;
@@ -75,7 +75,6 @@ public abstract class RegisterenhetsattributType {
     protected String kommunkod;
     protected Double totalLandarea;
     protected Double totalVattenarea;
-    protected Double totalFiskeomradesarea;
     protected Double totalRegisterarea;
     protected Boolean totalAreaOsaker;
     protected boolean tredimensionell;
@@ -251,30 +250,6 @@ public abstract class RegisterenhetsattributType {
      */
     public void setTotalVattenarea(Double value) {
         this.totalVattenarea = value;
-    }
-
-    /**
-     * Gets the value of the totalFiskeomradesarea property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
-     */
-    public Double getTotalFiskeomradesarea() {
-        return totalFiskeomradesarea;
-    }
-
-    /**
-     * Sets the value of the totalFiskeomradesarea property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
-     */
-    public void setTotalFiskeomradesarea(Double value) {
-        this.totalFiskeomradesarea = value;
     }
 
     /**
