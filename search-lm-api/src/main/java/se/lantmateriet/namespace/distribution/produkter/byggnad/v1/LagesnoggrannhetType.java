@@ -4,6 +4,7 @@ package se.lantmateriet.namespace.distribution.produkter.byggnad.v1;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -36,7 +37,9 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class LagesnoggrannhetType {
 
+    @XmlSchemaType(name = "string")
     protected UtvarderingsmetodType utvarderingsmetod;
+    @XmlSchemaType(name = "string")
     protected IngenInformationType ingenInformation;
     @XmlElement(name = "Resultat")
     protected ResultatType resultat;

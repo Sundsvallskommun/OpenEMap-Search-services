@@ -24,9 +24,9 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Adress_QNAME = new QName("http://namespace.lantmateriet.se/distribution/products/address/v2", "Adress");
-    private final static QName _FritextCriteria_QNAME = new QName("http://namespace.lantmateriet.se/distribution/products/address/v2", "FritextCriteria");
     private final static QName _Adressreferens_QNAME = new QName("http://namespace.lantmateriet.se/distribution/products/address/v2", "Adressreferens");
+    private final static QName _FritextCriteria_QNAME = new QName("http://namespace.lantmateriet.se/distribution/products/address/v2", "FritextCriteria");
+    private final static QName _Adress_QNAME = new QName("http://namespace.lantmateriet.se/distribution/products/address/v2", "Adress");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: se.lantmateriet.namespace.distribution.products.address.v2
@@ -36,27 +36,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link FindAdressreferensResponse }
+     * Create an instance of {@link FindAdressResponse }
      * 
      */
-    public FindAdressreferensResponse createFindAdressreferensResponse() {
-        return new FindAdressreferensResponse();
+    public FindAdressResponse createFindAdressResponse() {
+        return new FindAdressResponse();
     }
 
     /**
-     * Create an instance of {@link AdressreferensType }
+     * Create an instance of {@link AdressType }
      * 
      */
-    public AdressreferensType createAdressreferensType() {
-        return new AdressreferensType();
-    }
-
-    /**
-     * Create an instance of {@link FindAdressreferensRequest }
-     * 
-     */
-    public FindAdressreferensRequest createFindAdressreferensRequest() {
-        return new FindAdressreferensRequest();
+    public AdressType createAdressType() {
+        return new AdressType();
     }
 
     /**
@@ -84,19 +76,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AdressType }
+     * Create an instance of {@link FindAdressreferensRequest }
      * 
      */
-    public AdressType createAdressType() {
-        return new AdressType();
+    public FindAdressreferensRequest createFindAdressreferensRequest() {
+        return new FindAdressreferensRequest();
     }
 
     /**
-     * Create an instance of {@link FindAdressResponse }
+     * Create an instance of {@link FindAdressreferensResponse }
      * 
      */
-    public FindAdressResponse createFindAdressResponse() {
-        return new FindAdressResponse();
+    public FindAdressreferensResponse createFindAdressreferensResponse() {
+        return new FindAdressreferensResponse();
+    }
+
+    /**
+     * Create an instance of {@link AdressreferensType }
+     * 
+     */
+    public AdressreferensType createAdressreferensType() {
+        return new AdressreferensType();
     }
 
     /**
@@ -108,12 +108,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AdressType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AdressreferensType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://namespace.lantmateriet.se/distribution/products/address/v2", name = "Adress", substitutionHeadNamespace = "http://www.opengis.net/gml", substitutionHeadName = "_Feature")
-    public JAXBElement<AdressType> createAdress(AdressType value) {
-        return new JAXBElement<AdressType>(_Adress_QNAME, AdressType.class, null, value);
+    @XmlElementDecl(namespace = "http://namespace.lantmateriet.se/distribution/products/address/v2", name = "Adressreferens")
+    public JAXBElement<AdressreferensType> createAdressreferens(AdressreferensType value) {
+        return new JAXBElement<AdressreferensType>(_Adressreferens_QNAME, AdressreferensType.class, null, value);
     }
 
     /**
@@ -126,12 +126,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AdressreferensType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AdressType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://namespace.lantmateriet.se/distribution/products/address/v2", name = "Adressreferens")
-    public JAXBElement<AdressreferensType> createAdressreferens(AdressreferensType value) {
-        return new JAXBElement<AdressreferensType>(_Adressreferens_QNAME, AdressreferensType.class, null, value);
+    @XmlElementDecl(namespace = "http://namespace.lantmateriet.se/distribution/products/address/v2", name = "Adress", substitutionHeadNamespace = "http://www.opengis.net/gml", substitutionHeadName = "_Feature")
+    public JAXBElement<AdressType> createAdress(AdressType value) {
+        return new JAXBElement<AdressType>(_Adress_QNAME, AdressType.class, null, value);
     }
 
 }

@@ -4,6 +4,7 @@ package se.lantmateriet.namespace.distribution.produkter.fastighet.v1;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -17,10 +18,10 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="objektidentitet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}UUIDType" minOccurs="0"/>
- *         &lt;element name="fastighetsnyckel" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}FastighetsnyckelType"/>
+ *         &lt;element name="objektidentitet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}UUIDType" minOccurs="0"/>
+ *         &lt;element name="fastighetsnyckel" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}FastighetsnyckelType"/>
  *         &lt;element name="beteckning" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="typ" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}RegisterenhetstypType"/>
+ *         &lt;element name="typ" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}RegisterenhetstypType"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -44,6 +45,7 @@ public class RegisterenhetsreferensType {
     @XmlElement(required = true)
     protected String beteckning;
     @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
     protected RegisterenhetstypType typ;
 
     /**

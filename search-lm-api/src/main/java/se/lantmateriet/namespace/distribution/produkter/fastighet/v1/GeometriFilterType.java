@@ -9,16 +9,16 @@ import net.opengis.gml._3.GeometryPropertyType;
 
 
 /**
- * <p>Java class for RegisterenhetGeometryFilterType complex type.
+ * <p>Java class for GeometriFilterType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="RegisterenhetGeometryFilterType">
+ * &lt;complexType name="GeometriFilterType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Geometry" type="{http://www.opengis.net/gml/3.2}GeometryPropertyType"/>
+ *         &lt;element name="Geometri" type="{http://www.opengis.net/gml/3.2}GeometryPropertyType"/>
  *         &lt;element name="buffer" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -29,38 +29,38 @@ import net.opengis.gml._3.GeometryPropertyType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RegisterenhetGeometryFilterType", propOrder = {
-    "geometry",
+@XmlType(name = "GeometriFilterType", propOrder = {
+    "geometri",
     "buffer"
 })
-public class RegisterenhetGeometryFilterType {
+public class GeometriFilterType {
 
-    @XmlElement(name = "Geometry", required = true)
-    protected GeometryPropertyType geometry;
+    @XmlElement(name = "Geometri", required = true)
+    protected GeometryPropertyType geometri;
     protected Integer buffer;
 
     /**
-     * Gets the value of the geometry property.
+     * Gets the value of the geometri property.
      * 
      * @return
      *     possible object is
      *     {@link GeometryPropertyType }
      *     
      */
-    public GeometryPropertyType getGeometry() {
-        return geometry;
+    public GeometryPropertyType getGeometri() {
+        return geometri;
     }
 
     /**
-     * Sets the value of the geometry property.
+     * Sets the value of the geometri property.
      * 
      * @param value
      *     allowed object is
      *     {@link GeometryPropertyType }
      *     
      */
-    public void setGeometry(GeometryPropertyType value) {
-        this.geometry = value;
+    public void setGeometri(GeometryPropertyType value) {
+        this.geometri = value;
     }
 
     /**

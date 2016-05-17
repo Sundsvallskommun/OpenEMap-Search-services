@@ -4,6 +4,7 @@ package se.lantmateriet.namespace.distribution.produkter.fastighet.v1;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -18,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="dagboksnummer" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="flaggniva" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}FlaggnivaType" minOccurs="0"/>
+ *         &lt;element name="flaggniva" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}FlaggnivaType" minOccurs="0"/>
  *         &lt;element name="flaggdatum1" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="flaggdatum2" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="flaggdatum3" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -42,6 +43,7 @@ public class ForrattningsstatusType {
 
     @XmlElement(required = true)
     protected String dagboksnummer;
+    @XmlSchemaType(name = "string")
     protected FlaggnivaType flaggniva;
     protected String flaggdatum1;
     protected String flaggdatum2;

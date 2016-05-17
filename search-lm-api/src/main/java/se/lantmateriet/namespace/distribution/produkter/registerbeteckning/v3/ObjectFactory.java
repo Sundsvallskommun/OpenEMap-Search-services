@@ -24,33 +24,17 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _GetRegisterbeteckningRequest_QNAME = new QName("http://namespace.lantmateriet.se/distribution/produkter/registerbeteckning/v3", "GetRegisterbeteckningRequest");
-    private final static QName _RegisterbeteckningsreferensResponse_QNAME = new QName("http://namespace.lantmateriet.se/distribution/produkter/registerbeteckning/v3", "RegisterbeteckningsreferensResponse");
     private final static QName _RegisterbeteckningResponse_QNAME = new QName("http://namespace.lantmateriet.se/distribution/produkter/registerbeteckning/v3", "RegisterbeteckningResponse");
-    private final static QName _FindRegisterbeteckningRequest_QNAME = new QName("http://namespace.lantmateriet.se/distribution/produkter/registerbeteckning/v3", "FindRegisterbeteckningRequest");
+    private final static QName _RegisterbeteckningsreferensResponse_QNAME = new QName("http://namespace.lantmateriet.se/distribution/produkter/registerbeteckning/v3", "RegisterbeteckningsreferensResponse");
+    private final static QName _GetRegisterbeteckningRequest_QNAME = new QName("http://namespace.lantmateriet.se/distribution/produkter/registerbeteckning/v3", "GetRegisterbeteckningRequest");
     private final static QName _Registerbeteckning_QNAME = new QName("http://namespace.lantmateriet.se/distribution/produkter/registerbeteckning/v3", "Registerbeteckning");
+    private final static QName _FindRegisterbeteckningRequest_QNAME = new QName("http://namespace.lantmateriet.se/distribution/produkter/registerbeteckning/v3", "FindRegisterbeteckningRequest");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: se.lantmateriet.namespace.distribution.produkter.registerbeteckning.v3
      * 
      */
     public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link RegisterbeteckningType }
-     * 
-     */
-    public RegisterbeteckningType createRegisterbeteckningType() {
-        return new RegisterbeteckningType();
-    }
-
-    /**
-     * Create an instance of {@link RegisterbeteckningResponseType }
-     * 
-     */
-    public RegisterbeteckningResponseType createRegisterbeteckningResponseType() {
-        return new RegisterbeteckningResponseType();
     }
 
     /**
@@ -62,14 +46,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link FindRegisterbeteckningRequestType }
-     * 
-     */
-    public FindRegisterbeteckningRequestType createFindRegisterbeteckningRequestType() {
-        return new FindRegisterbeteckningRequestType();
-    }
-
-    /**
      * Create an instance of {@link GetRegisterbeteckningRequestType }
      * 
      */
@@ -78,11 +54,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RegisterbeteckningFilterType }
+     * Create an instance of {@link FindRegisterbeteckningRequestType }
      * 
      */
-    public RegisterbeteckningFilterType createRegisterbeteckningFilterType() {
-        return new RegisterbeteckningFilterType();
+    public FindRegisterbeteckningRequestType createFindRegisterbeteckningRequestType() {
+        return new FindRegisterbeteckningRequestType();
+    }
+
+    /**
+     * Create an instance of {@link RegisterbeteckningResponseType }
+     * 
+     */
+    public RegisterbeteckningResponseType createRegisterbeteckningResponseType() {
+        return new RegisterbeteckningResponseType();
+    }
+
+    /**
+     * Create an instance of {@link RegisterbeteckningType }
+     * 
+     */
+    public RegisterbeteckningType createRegisterbeteckningType() {
+        return new RegisterbeteckningType();
     }
 
     /**
@@ -94,19 +86,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RegisterenhetsreferensType }
+     * Create an instance of {@link RegisterbeteckningFilterType }
      * 
      */
-    public RegisterenhetsreferensType createRegisterenhetsreferensType() {
-        return new RegisterenhetsreferensType();
-    }
-
-    /**
-     * Create an instance of {@link EnhetsomradeType }
-     * 
-     */
-    public EnhetsomradeType createEnhetsomradeType() {
-        return new EnhetsomradeType();
+    public RegisterbeteckningFilterType createRegisterbeteckningFilterType() {
+        return new RegisterbeteckningFilterType();
     }
 
     /**
@@ -126,21 +110,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetRegisterbeteckningRequestType }{@code >}}
+     * Create an instance of {@link RegisterenhetsreferensType }
      * 
      */
-    @XmlElementDecl(namespace = "http://namespace.lantmateriet.se/distribution/produkter/registerbeteckning/v3", name = "GetRegisterbeteckningRequest")
-    public JAXBElement<GetRegisterbeteckningRequestType> createGetRegisterbeteckningRequest(GetRegisterbeteckningRequestType value) {
-        return new JAXBElement<GetRegisterbeteckningRequestType>(_GetRegisterbeteckningRequest_QNAME, GetRegisterbeteckningRequestType.class, null, value);
+    public RegisterenhetsreferensType createRegisterenhetsreferensType() {
+        return new RegisterenhetsreferensType();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RegisterbeteckningsreferensResponseType }{@code >}}
+     * Create an instance of {@link EnhetsomradeType }
      * 
      */
-    @XmlElementDecl(namespace = "http://namespace.lantmateriet.se/distribution/produkter/registerbeteckning/v3", name = "RegisterbeteckningsreferensResponse")
-    public JAXBElement<RegisterbeteckningsreferensResponseType> createRegisterbeteckningsreferensResponse(RegisterbeteckningsreferensResponseType value) {
-        return new JAXBElement<RegisterbeteckningsreferensResponseType>(_RegisterbeteckningsreferensResponse_QNAME, RegisterbeteckningsreferensResponseType.class, null, value);
+    public EnhetsomradeType createEnhetsomradeType() {
+        return new EnhetsomradeType();
     }
 
     /**
@@ -153,12 +135,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FindRegisterbeteckningRequestType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link RegisterbeteckningsreferensResponseType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://namespace.lantmateriet.se/distribution/produkter/registerbeteckning/v3", name = "FindRegisterbeteckningRequest")
-    public JAXBElement<FindRegisterbeteckningRequestType> createFindRegisterbeteckningRequest(FindRegisterbeteckningRequestType value) {
-        return new JAXBElement<FindRegisterbeteckningRequestType>(_FindRegisterbeteckningRequest_QNAME, FindRegisterbeteckningRequestType.class, null, value);
+    @XmlElementDecl(namespace = "http://namespace.lantmateriet.se/distribution/produkter/registerbeteckning/v3", name = "RegisterbeteckningsreferensResponse")
+    public JAXBElement<RegisterbeteckningsreferensResponseType> createRegisterbeteckningsreferensResponse(RegisterbeteckningsreferensResponseType value) {
+        return new JAXBElement<RegisterbeteckningsreferensResponseType>(_RegisterbeteckningsreferensResponse_QNAME, RegisterbeteckningsreferensResponseType.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetRegisterbeteckningRequestType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://namespace.lantmateriet.se/distribution/produkter/registerbeteckning/v3", name = "GetRegisterbeteckningRequest")
+    public JAXBElement<GetRegisterbeteckningRequestType> createGetRegisterbeteckningRequest(GetRegisterbeteckningRequestType value) {
+        return new JAXBElement<GetRegisterbeteckningRequestType>(_GetRegisterbeteckningRequest_QNAME, GetRegisterbeteckningRequestType.class, null, value);
     }
 
     /**
@@ -168,6 +159,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://namespace.lantmateriet.se/distribution/produkter/registerbeteckning/v3", name = "Registerbeteckning", substitutionHeadNamespace = "http://www.opengis.net/gml/3.2", substitutionHeadName = "AbstractFeature")
     public JAXBElement<RegisterbeteckningType> createRegisterbeteckning(RegisterbeteckningType value) {
         return new JAXBElement<RegisterbeteckningType>(_Registerbeteckning_QNAME, RegisterbeteckningType.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindRegisterbeteckningRequestType }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://namespace.lantmateriet.se/distribution/produkter/registerbeteckning/v3", name = "FindRegisterbeteckningRequest")
+    public JAXBElement<FindRegisterbeteckningRequestType> createFindRegisterbeteckningRequest(FindRegisterbeteckningRequestType value) {
+        return new JAXBElement<FindRegisterbeteckningRequestType>(_FindRegisterbeteckningRequest_QNAME, FindRegisterbeteckningRequestType.class, null, value);
     }
 
 }

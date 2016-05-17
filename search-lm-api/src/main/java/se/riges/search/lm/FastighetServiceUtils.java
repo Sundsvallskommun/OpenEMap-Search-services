@@ -124,13 +124,13 @@ public class FastighetServiceUtils extends ServiceUtils {
 	static public RegisterenhetsreferensType findRegisterenhet(Point point, String lmUser) throws IOException, LMAccountException {
 		FastighetPortType binding = createBinding(lmUser);
 		FindRegisterenhetRequestType request = new FindRegisterenhetRequestType();
-		RegisterenhetGeometryFilterType filter = new RegisterenhetGeometryFilterType();
+		GeometriFilterType filter = new GeometriFilterType();
 		PointType pointType = (PointType) gmlConverter.toVendorGeometry(point);
 		JAXBElement<PointType> element = objectFactory.createPoint(pointType);
 		GeometryPropertyType geometryProperty =  new GeometryPropertyType();
 		geometryProperty.setAbstractGeometry(element);
-		filter.setGeometry(geometryProperty);
-		request.setRegisterenhetGeometryFilter(filter);
+		filter.setGeometri(geometryProperty);
+		request.setGeometriFilter(filter);
 		RegisterenhetsreferensResponseType response = binding.findRegisterenhet(request);
 		
 		List<RegisterenhetsreferensType> fastigheter = response.getRegisterenhetsreferens();

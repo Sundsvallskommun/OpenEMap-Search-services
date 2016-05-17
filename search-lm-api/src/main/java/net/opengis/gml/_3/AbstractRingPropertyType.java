@@ -45,8 +45,8 @@ public class AbstractRingPropertyType {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link AbstractRingType }{@code >}
      *     {@link JAXBElement }{@code <}{@link LinearRingType }{@code >}
+     *     {@link JAXBElement }{@code <}{@link AbstractRingType }{@code >}
      *     
      */
     public JAXBElement<? extends AbstractRingType> getAbstractRing() {
@@ -58,8 +58,8 @@ public class AbstractRingPropertyType {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link AbstractRingType }{@code >}
      *     {@link JAXBElement }{@code <}{@link LinearRingType }{@code >}
+     *     {@link JAXBElement }{@code <}{@link AbstractRingType }{@code >}
      *     
      */
     public void setAbstractRing(JAXBElement<? extends AbstractRingType> value) {

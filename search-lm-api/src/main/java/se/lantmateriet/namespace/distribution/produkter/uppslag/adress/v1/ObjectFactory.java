@@ -35,14 +35,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RegisterenhetsreferensResponseType }
-     * 
-     */
-    public RegisterenhetsreferensResponseType createRegisterenhetsreferensResponseType() {
-        return new RegisterenhetsreferensResponseType();
-    }
-
-    /**
      * Create an instance of {@link FindRegisterenhetRequestType }
      * 
      */
@@ -51,11 +43,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RegisterenhetAdressFilterType }
+     * Create an instance of {@link RegisterenhetsreferensResponseType }
      * 
      */
-    public RegisterenhetAdressFilterType createRegisterenhetAdressFilterType() {
-        return new RegisterenhetAdressFilterType();
+    public RegisterenhetsreferensResponseType createRegisterenhetsreferensResponseType() {
+        return new RegisterenhetsreferensResponseType();
+    }
+
+    /**
+     * Create an instance of {@link RegisterenhetsreferensType }
+     * 
+     */
+    public RegisterenhetsreferensType createRegisterenhetsreferensType() {
+        return new RegisterenhetsreferensType();
     }
 
     /**
@@ -67,11 +67,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RegisterenhetsreferensType }
+     * Create an instance of {@link RegisterenhetAdressFilterType }
      * 
      */
-    public RegisterenhetsreferensType createRegisterenhetsreferensType() {
-        return new RegisterenhetsreferensType();
+    public RegisterenhetAdressFilterType createRegisterenhetAdressFilterType() {
+        return new RegisterenhetAdressFilterType();
     }
 
     /**

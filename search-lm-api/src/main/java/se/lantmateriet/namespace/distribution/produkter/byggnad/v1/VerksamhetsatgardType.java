@@ -41,6 +41,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 public class VerksamhetsatgardType {
 
     @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
     protected AtgardstypType atgardstyp;
     @XmlElement(required = true)
     protected String ansvarigOrganisation;

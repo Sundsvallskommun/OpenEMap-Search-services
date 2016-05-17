@@ -4,6 +4,7 @@ package se.lantmateriet.namespace.distribution.produkter.fastighet.v1;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -17,7 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="foreningstyp" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}ForeningstypType"/>
+ *         &lt;element name="foreningstyp" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}ForeningstypType"/>
  *         &lt;element name="foreningsnamn" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -35,6 +36,7 @@ import javax.xml.bind.annotation.XmlType;
 public class ForeningForForvaltningType {
 
     @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
     protected ForeningstypType foreningstyp;
     @XmlElement(required = true)
     protected String foreningsnamn;

@@ -4,6 +4,7 @@ package se.lantmateriet.namespace.distribution.produkter.fastighet.v1;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -18,12 +19,12 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;choice minOccurs="0">
- *           &lt;element name="Delagare" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}RegisterenhetsreferensPropertyType"/>
- *           &lt;element name="Samfallighet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}RegisterenhetsreferensPropertyType"/>
+ *           &lt;element name="Delagare" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}RegisterenhetsreferensPropertyType"/>
+ *           &lt;element name="Samfallighet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}RegisterenhetsreferensPropertyType"/>
  *         &lt;/choice>
+ *         &lt;element name="AnnanDelagare" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}AnnanDelagare" minOccurs="0"/>
  *         &lt;element name="andel" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="andelstalssort" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}AndelstalssortType" minOccurs="0"/>
- *         &lt;element name="AnnanDelagare" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}AnnanDelagare" minOccurs="0"/>
+ *         &lt;element name="andelstalssort" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}AndelstalssortType" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,9 +37,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "AndelISamfallighetType", propOrder = {
     "delagare",
     "samfallighet",
+    "annanDelagare",
     "andel",
-    "andelstalssort",
-    "annanDelagare"
+    "andelstalssort"
 })
 public class AndelISamfallighetType {
 
@@ -46,10 +47,11 @@ public class AndelISamfallighetType {
     protected RegisterenhetsreferensPropertyType delagare;
     @XmlElement(name = "Samfallighet")
     protected RegisterenhetsreferensPropertyType samfallighet;
-    protected String andel;
-    protected AndelstalssortType andelstalssort;
     @XmlElement(name = "AnnanDelagare")
     protected AnnanDelagare annanDelagare;
+    protected String andel;
+    @XmlSchemaType(name = "string")
+    protected AndelstalssortType andelstalssort;
 
     /**
      * Gets the value of the delagare property.
@@ -100,6 +102,30 @@ public class AndelISamfallighetType {
     }
 
     /**
+     * Gets the value of the annanDelagare property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link AnnanDelagare }
+     *     
+     */
+    public AnnanDelagare getAnnanDelagare() {
+        return annanDelagare;
+    }
+
+    /**
+     * Sets the value of the annanDelagare property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AnnanDelagare }
+     *     
+     */
+    public void setAnnanDelagare(AnnanDelagare value) {
+        this.annanDelagare = value;
+    }
+
+    /**
      * Gets the value of the andel property.
      * 
      * @return
@@ -145,30 +171,6 @@ public class AndelISamfallighetType {
      */
     public void setAndelstalssort(AndelstalssortType value) {
         this.andelstalssort = value;
-    }
-
-    /**
-     * Gets the value of the annanDelagare property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AnnanDelagare }
-     *     
-     */
-    public AnnanDelagare getAnnanDelagare() {
-        return annanDelagare;
-    }
-
-    /**
-     * Sets the value of the annanDelagare property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AnnanDelagare }
-     *     
-     */
-    public void setAnnanDelagare(AnnanDelagare value) {
-        this.annanDelagare = value;
     }
 
 }

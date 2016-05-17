@@ -8,6 +8,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import net.opengis.gml._3.AbstractFeatureType;
 
@@ -66,6 +67,7 @@ public class ByggnadType
     @XmlElement(required = true)
     protected String objektidentitet;
     @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
     protected ObjektstatusType objektstatus;
     @XmlElement(name = "Byggnadsattribut")
     protected ByggnadsattributType byggnadsattribut;
@@ -239,13 +241,13 @@ public class ByggnadType
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link JAXBElement }{@code <}{@link SamhallsfunktionType }{@code >}
-     * {@link JAXBElement }{@code <}{@link EkonomibyggnadType }{@code >}
-     * {@link JAXBElement }{@code <}{@link KomplementbyggnadType }{@code >}
      * {@link JAXBElement }{@code <}{@link IndustriType }{@code >}
-     * {@link JAXBElement }{@code <}{@link BostadType }{@code >}
      * {@link JAXBElement }{@code <}{@link OvrigByggnadType }{@code >}
+     * {@link JAXBElement }{@code <}{@link BostadType }{@code >}
      * {@link JAXBElement }{@code <}{@link ByggnadsandamalType }{@code >}
+     * {@link JAXBElement }{@code <}{@link EkonomibyggnadType }{@code >}
      * {@link JAXBElement }{@code <}{@link VerksamhetType }{@code >}
+     * {@link JAXBElement }{@code <}{@link KomplementbyggnadType }{@code >}
      * 
      * 
      */

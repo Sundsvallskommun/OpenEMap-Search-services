@@ -4,6 +4,7 @@ package se.lantmateriet.namespace.distribution.produkter.fastighet.v1;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import net.opengis.gml._3.GeometryArrayPropertyType;
 import net.opengis.gml._3.PointPropertyType;
@@ -29,7 +30,7 @@ import net.opengis.gml._3.PointPropertyType;
  *         &lt;element name="enhetsomradetsTotalarea" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/>
  *         &lt;element name="osakertLage" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="registerkarta" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="ytkvalitet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}YtkvalitetType" minOccurs="0"/>
+ *         &lt;element name="ytkvalitet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}YtkvalitetType" minOccurs="0"/>
  *         &lt;element name="Yta" type="{http://www.opengis.net/gml/3.2}GeometryArrayPropertyType" minOccurs="0"/>
  *         &lt;element name="Centralpunkt" type="{http://www.opengis.net/gml/3.2}PointPropertyType" minOccurs="0"/>
  *       &lt;/sequence>
@@ -68,6 +69,7 @@ public class EnhetsomradeType {
     protected Double enhetsomradetsTotalarea;
     protected boolean osakertLage;
     protected String registerkarta;
+    @XmlSchemaType(name = "string")
     protected YtkvalitetType ytkvalitet;
     @XmlElement(name = "Yta")
     protected GeometryArrayPropertyType yta;

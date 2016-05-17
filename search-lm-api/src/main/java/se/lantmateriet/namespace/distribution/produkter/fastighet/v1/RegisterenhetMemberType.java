@@ -19,7 +19,7 @@ import net.opengis.gml._3.AbstractFeatureMemberType;
  *   &lt;complexContent>
  *     &lt;extension base="{http://www.opengis.net/gml/3.2}AbstractFeatureMemberType">
  *       &lt;sequence>
- *         &lt;element ref="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}Registerenhet"/>
+ *         &lt;element ref="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}Registerenhet"/>
  *       &lt;/sequence>
  *     &lt;/extension>
  *   &lt;/complexContent>
@@ -36,7 +36,7 @@ public class RegisterenhetMemberType
     extends AbstractFeatureMemberType
 {
 
-    @XmlElementRef(name = "Registerenhet", namespace = "http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5", type = JAXBElement.class)
+    @XmlElementRef(name = "Registerenhet", namespace = "http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6", type = JAXBElement.class)
     protected JAXBElement<? extends RegisterenhetType> registerenhet;
 
     /**

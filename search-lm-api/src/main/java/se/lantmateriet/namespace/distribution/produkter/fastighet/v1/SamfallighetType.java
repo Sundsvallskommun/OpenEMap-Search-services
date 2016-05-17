@@ -17,9 +17,9 @@ import javax.xml.bind.annotation.XmlType;
  * <pre>
  * &lt;complexType name="SamfallighetType">
  *   &lt;complexContent>
- *     &lt;extension base="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}RegisterenhetType">
+ *     &lt;extension base="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}RegisterenhetType">
  *       &lt;sequence>
- *         &lt;element name="ForeningForForvaltning" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}ForeningForForvaltningType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="ForeningForForvaltning" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}ForeningForForvaltningType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/extension>
  *   &lt;/complexContent>

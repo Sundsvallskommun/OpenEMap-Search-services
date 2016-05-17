@@ -17,7 +17,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="RegisterenhetGeometryFilter" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}RegisterenhetGeometryFilterType"/>
+ *         &lt;element name="GeometriFilter" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}GeometriFilterType"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -28,35 +28,35 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "FindRegisterenhetRequestType", propOrder = {
-    "registerenhetGeometryFilter"
+    "geometriFilter"
 })
 public class FindRegisterenhetRequestType {
 
-    @XmlElement(name = "RegisterenhetGeometryFilter", required = true)
-    protected RegisterenhetGeometryFilterType registerenhetGeometryFilter;
+    @XmlElement(name = "GeometriFilter", required = true)
+    protected GeometriFilterType geometriFilter;
 
     /**
-     * Gets the value of the registerenhetGeometryFilter property.
+     * Gets the value of the geometriFilter property.
      * 
      * @return
      *     possible object is
-     *     {@link RegisterenhetGeometryFilterType }
+     *     {@link GeometriFilterType }
      *     
      */
-    public RegisterenhetGeometryFilterType getRegisterenhetGeometryFilter() {
-        return registerenhetGeometryFilter;
+    public GeometriFilterType getGeometriFilter() {
+        return geometriFilter;
     }
 
     /**
-     * Sets the value of the registerenhetGeometryFilter property.
+     * Sets the value of the geometriFilter property.
      * 
      * @param value
      *     allowed object is
-     *     {@link RegisterenhetGeometryFilterType }
+     *     {@link GeometriFilterType }
      *     
      */
-    public void setRegisterenhetGeometryFilter(RegisterenhetGeometryFilterType value) {
-        this.registerenhetGeometryFilter = value;
+    public void setGeometriFilter(GeometriFilterType value) {
+        this.geometriFilter = value;
     }
 
 }

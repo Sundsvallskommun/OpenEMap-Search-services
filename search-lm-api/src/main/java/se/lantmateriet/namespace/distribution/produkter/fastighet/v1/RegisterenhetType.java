@@ -8,6 +8,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 import net.opengis.gml._3.AbstractFeatureType;
@@ -23,24 +24,24 @@ import net.opengis.gml._3.AbstractFeatureType;
  *   &lt;complexContent>
  *     &lt;extension base="{http://www.opengis.net/gml/3.2}AbstractFeatureType">
  *       &lt;sequence>
- *         &lt;element name="objektidentitet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}UUIDType" minOccurs="0"/>
- *         &lt;element name="fastighetsnyckel" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}FastighetsnyckelType"/>
- *         &lt;element name="objektstatus" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}ObjektstatusType"/>
- *         &lt;element ref="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}Registerenhetsattribut" minOccurs="0"/>
- *         &lt;element name="PagaendeArende" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}PagaendeArendeType" minOccurs="0"/>
- *         &lt;element name="Registerenhetsanmarkning" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}RegisterenhetsanmarkningType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="Registerbeteckning" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}RegisterbeteckningType" minOccurs="0"/>
- *         &lt;element name="TidigareRegisterbeteckning" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}TidigareRegisterbeteckningType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="Forsamling" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}ForsamlingType" minOccurs="0"/>
- *         &lt;element name="UrholkasAvEnhetsutrymme" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}UrholkasAvEnhetsutrymmeType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="Fastighetsatgard" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}FastighetsatgardType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="Enhetsomrade" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}EnhetsomradeType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="Enhetsutrymme" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}EnhetsutrymmeType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="Fiskeomrade" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}FiskeomradeType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="OutrettOmrade" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}OutrettOmradeType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="Registerenhetshistorik" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}RegisterenhetshistorikType" minOccurs="0"/>
- *         &lt;element name="AndelISamfallighet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}AndelISamfallighetType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="AldreBeteckning" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5}AldreBeteckningType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="objektidentitet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}UUIDType" minOccurs="0"/>
+ *         &lt;element name="fastighetsnyckel" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}FastighetsnyckelType"/>
+ *         &lt;element name="objektstatus" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}ObjektstatusType"/>
+ *         &lt;element ref="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}Registerenhetsattribut" minOccurs="0"/>
+ *         &lt;element name="PagaendeArende" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}PagaendeArendeType" minOccurs="0"/>
+ *         &lt;element name="Registerenhetsanmarkning" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}RegisterenhetsanmarkningType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Registerbeteckning" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}RegisterbeteckningType" minOccurs="0"/>
+ *         &lt;element name="TidigareRegisterbeteckning" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}TidigareRegisterbeteckningType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Distrikt" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}DistriktType" minOccurs="0"/>
+ *         &lt;element name="UrholkasAvEnhetsutrymme" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}UrholkasAvEnhetsutrymmeType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Fastighetsatgard" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}FastighetsatgardType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Enhetsomrade" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}EnhetsomradeType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Enhetsutrymme" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}EnhetsutrymmeType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Fiskeomrade" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}FiskeomradeType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="OutrettOmrade" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}OutrettOmradeType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Registerenhetshistorik" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}RegisterenhetshistorikType" minOccurs="0"/>
+ *         &lt;element name="AndelISamfallighet" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}AndelISamfallighetType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="AldreBeteckning" type="{http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6}AldreBeteckningType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/extension>
  *   &lt;/complexContent>
@@ -59,7 +60,7 @@ import net.opengis.gml._3.AbstractFeatureType;
     "registerenhetsanmarkning",
     "registerbeteckning",
     "tidigareRegisterbeteckning",
-    "forsamling",
+    "distrikt",
     "urholkasAvEnhetsutrymme",
     "fastighetsatgard",
     "enhetsomrade",
@@ -82,8 +83,9 @@ public abstract class RegisterenhetType
     @XmlElement(required = true)
     protected String fastighetsnyckel;
     @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
     protected ObjektstatusType objektstatus;
-    @XmlElementRef(name = "Registerenhetsattribut", namespace = "http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.5", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "Registerenhetsattribut", namespace = "http://namespace.lantmateriet.se/distribution/produkter/fastighet/v1.6", type = JAXBElement.class, required = false)
     protected JAXBElement<? extends RegisterenhetsattributType> registerenhetsattribut;
     @XmlElement(name = "PagaendeArende")
     protected PagaendeArendeType pagaendeArende;
@@ -93,8 +95,8 @@ public abstract class RegisterenhetType
     protected RegisterbeteckningType registerbeteckning;
     @XmlElement(name = "TidigareRegisterbeteckning")
     protected List<TidigareRegisterbeteckningType> tidigareRegisterbeteckning;
-    @XmlElement(name = "Forsamling")
-    protected ForsamlingType forsamling;
+    @XmlElement(name = "Distrikt")
+    protected DistriktType distrikt;
     @XmlElement(name = "UrholkasAvEnhetsutrymme")
     protected List<UrholkasAvEnhetsutrymmeType> urholkasAvEnhetsutrymme;
     @XmlElement(name = "Fastighetsatgard")
@@ -192,8 +194,8 @@ public abstract class RegisterenhetType
      * @return
      *     possible object is
      *     {@link JAXBElement }{@code <}{@link SamfallighetsattributType }{@code >}
-     *     {@link JAXBElement }{@code <}{@link RegisterenhetsattributType }{@code >}
      *     {@link JAXBElement }{@code <}{@link FastighetsattributType }{@code >}
+     *     {@link JAXBElement }{@code <}{@link RegisterenhetsattributType }{@code >}
      *     
      */
     public JAXBElement<? extends RegisterenhetsattributType> getRegisterenhetsattribut() {
@@ -206,8 +208,8 @@ public abstract class RegisterenhetType
      * @param value
      *     allowed object is
      *     {@link JAXBElement }{@code <}{@link SamfallighetsattributType }{@code >}
-     *     {@link JAXBElement }{@code <}{@link RegisterenhetsattributType }{@code >}
      *     {@link JAXBElement }{@code <}{@link FastighetsattributType }{@code >}
+     *     {@link JAXBElement }{@code <}{@link RegisterenhetsattributType }{@code >}
      *     
      */
     public void setRegisterenhetsattribut(JAXBElement<? extends RegisterenhetsattributType> value) {
@@ -321,27 +323,27 @@ public abstract class RegisterenhetType
     }
 
     /**
-     * Gets the value of the forsamling property.
+     * Gets the value of the distrikt property.
      * 
      * @return
      *     possible object is
-     *     {@link ForsamlingType }
+     *     {@link DistriktType }
      *     
      */
-    public ForsamlingType getForsamling() {
-        return forsamling;
+    public DistriktType getDistrikt() {
+        return distrikt;
     }
 
     /**
-     * Sets the value of the forsamling property.
+     * Sets the value of the distrikt property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ForsamlingType }
+     *     {@link DistriktType }
      *     
      */
-    public void setForsamling(ForsamlingType value) {
-        this.forsamling = value;
+    public void setDistrikt(DistriktType value) {
+        this.distrikt = value;
     }
 
     /**

@@ -48,9 +48,9 @@ public class MultiGeometryPropertyType {
      * @return
      *     possible object is
      *     {@link JAXBElement }{@code <}{@link MultiPointType }{@code >}
-     *     {@link JAXBElement }{@code <}{@link MultiSurfaceType }{@code >}
      *     {@link JAXBElement }{@code <}{@link AbstractGeometricAggregateType }{@code >}
      *     {@link JAXBElement }{@code <}{@link MultiCurveType }{@code >}
+     *     {@link JAXBElement }{@code <}{@link MultiSurfaceType }{@code >}
      *     
      */
     public JAXBElement<? extends AbstractGeometricAggregateType> getGeometricAggregate() {
@@ -63,9 +63,9 @@ public class MultiGeometryPropertyType {
      * @param value
      *     allowed object is
      *     {@link JAXBElement }{@code <}{@link MultiPointType }{@code >}
-     *     {@link JAXBElement }{@code <}{@link MultiSurfaceType }{@code >}
      *     {@link JAXBElement }{@code <}{@link AbstractGeometricAggregateType }{@code >}
      *     {@link JAXBElement }{@code <}{@link MultiCurveType }{@code >}
+     *     {@link JAXBElement }{@code <}{@link MultiSurfaceType }{@code >}
      *     
      */
     public void setGeometricAggregate(JAXBElement<? extends AbstractGeometricAggregateType> value) {

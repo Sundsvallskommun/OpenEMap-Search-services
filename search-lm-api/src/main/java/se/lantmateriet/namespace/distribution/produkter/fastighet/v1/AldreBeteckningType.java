@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * 
- *         Tidiagre beteckning, före beteckningsreformen.
+ *         Tidigare beteckning, före beteckningsreformen.
  *       
  * 
  * <p>Java class for AldreBeteckningType complex type.
