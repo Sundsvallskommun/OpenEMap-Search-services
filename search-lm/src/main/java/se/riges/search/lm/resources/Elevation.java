@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.client.Client;
@@ -16,11 +17,11 @@ import org.glassfish.jersey.client.authentication.HttpAuthenticationFeature;
 import se.riges.lm.rmi.exceptions.LMAccountException;
 import se.riges.search.lm.ServiceUtils;
 
-@Path("elevation")
+@Path("elevation/{srid}/{x}/{y}")
 public class Elevation {
 	@GET
 	@Produces("application/json")
-	public Response get(@QueryParam("lmuser") String lmUser, @QueryParam("srid") int srid, @QueryParam("x") double x, @QueryParam("y") double y) throws LMAccountException, IOException {
+	public String get(@QueryParam("lmuser") String lmUser, @PathParam("srid") int srid, @PathParam("x") double x, @PathParam("y") double y) throws LMAccountException, IOException {
 		final String url = "https://services.lantmateriet.se/distribution/produkter/hojd/v1/rest/api";
 		final String path = "/hojd/" + srid + "/" + x + "/" + y;
 		
@@ -33,6 +34,8 @@ public class Elevation {
 		client.register(feature);
 		
 		final WebTarget target = client.target(url).path(path);
-		return target.request().get();
+		Response response = target.request().get();
+		String json = response.readEntity(String.class);
+		return json;
 	}
 }
