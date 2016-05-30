@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>se.riges</groupId>
 	<artifactId>openemap-search-backend-rmi</artifactId>
-	<version>1.3.0</version>
+	<version>1.3.1</version>
 	<name>OpenEMap Search backend RMI</name>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
