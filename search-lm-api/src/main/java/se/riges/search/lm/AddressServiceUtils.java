@@ -47,7 +47,6 @@ import se.lantmateriet.namespace.distribution.products.address.v2.MatchFritextTy
 import se.lantmateriet.namespace.distribution.products.address.v2.MatchModeType;
 import se.riges.lm.rmi.exceptions.LMAccountException;
 
-import com.google.common.base.Joiner;
 import com.vividsolutions.jts.geom.Coordinate;
 import com.vividsolutions.jts.geom.GeometryFactory;
 import com.vividsolutions.jts.geom.Point;
@@ -160,44 +159,21 @@ public class AddressServiceUtils extends ServiceUtils {
 		
 		Address binding = createBinding(lmUser);
 		
-		// require two terms minimum, first term is assumed to be municipality
 		String[] terms = searchString.split(" ");
-		if (terms.length < 2) {
-			throw new RuntimeException("Too few terms in search string");
-		}
 		
 		FindAdressRequest findAdressRequest = new FindAdressRequest();
 		AdressCriteriaType adressCriteria = new AdressCriteriaType();
-
-		String adressomrade;
-		if (terms.length > 2) {	
-			// inspect last term, if not a digit treat all terms after first as "Adressomrade"
-			// else use last term as "Adressplatsnummer"
-			String lastTerm = terms[terms.length - 1];
-
-			if (!Character.isDigit(lastTerm.charAt(0))) {
-				MatchFritextType matchFritextType = new MatchFritextType();
-				matchFritextType.setMatch(MatchModeType.STARTS_WITH);
-				matchFritextType.setValue(terms[2]);
-				adressCriteria.setAdressplatsnummer(matchFritextType);
-				int adressomradeTermsCount = terms.length - 2;
-				String[] adressomradeTerms = new String[adressomradeTermsCount];
-				System.arraycopy(terms, 1, adressomradeTerms, 0, adressomradeTermsCount);
-				adressomrade = Joiner.on(' ').join(adressomradeTerms);
-			} else {
-				int adressomradeTermsCount = terms.length - 1;
-				String[] adressomradeTerms = new String[adressomradeTermsCount];
-				System.arraycopy(terms, 1, adressomradeTerms, 0, adressomradeTermsCount);
-				adressomrade = Joiner.on(' ').join(adressomradeTerms);
-			}
-		} else {
-			// simple case only two terms so use second term as "Adressomrade"
-			adressomrade = terms[1];
+		if (terms.length < 2) {
+			throw new RuntimeException("Too few terms in search string");
+		} else if (terms.length == 3) {
+			MatchFritextType matchFritextType = new MatchFritextType();
+			matchFritextType.setMatch(MatchModeType.STARTS_WITH);
+			matchFritextType.setValue(terms[2]);
+			adressCriteria.setAdressplatsnummer(matchFritextType);
 		}
-
 		MatchFritextType matchFritextType = new MatchFritextType();
 		matchFritextType.setMatch(MatchModeType.STARTS_WITH);
-		matchFritextType.setValue(adressomrade);
+		matchFritextType.setValue(terms[1]);
 		adressCriteria.setAdressomrade(matchFritextType);
 		adressCriteria.setKommunnamn(terms[0]);
 		findAdressRequest.setAdressCriteria(adressCriteria);
